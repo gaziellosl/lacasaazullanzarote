@@ -15,10 +15,16 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  postion:relative;
 }
 
 .bigFont{
-	font-size:10vw
+	font-size:10vw;
+}
+
+.width30 {
+  width: 30%;
 }
 
 /* Style the hamburger menu */
@@ -44,7 +50,8 @@ html{
 	-webkit-text-size-adjust:100%
 }
 body{
-	margin:0
+	margin:0;
+  padding-top: 54px;
 }
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
 	display:block
@@ -1069,6 +1076,9 @@ a{
 }
 .w3-padding-large{
 	padding:12px 24px!important
+}
+.w3-padding-xlarge{
+	padding:24px 48px!important
 }
 .w3-padding-16{
 	padding-top:16px!important;
