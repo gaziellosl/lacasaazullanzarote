@@ -23,18 +23,12 @@
 	font-size:10vw;
 }
 
-.width30 {
-  width: 30vw;
+.widthLogo {
+  width: 60%;
+  height: auto;
+  max-width: 400px
 }
 
-/* Style the hamburger menu */
-/* a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-} */
 
 
 /* W3.CSS 4.13 June 2019 by Jan Egil and Borge Refsnes */
@@ -120,7 +114,7 @@ code,kbd,pre,samp{
 }
 hr{
 	box-sizing:content-box;
-	height:0;
+	height:1;
 	overflow:visible
 }
 button,input,select,textarea,optgroup{
@@ -220,7 +214,7 @@ h1,h2,h3,h4,h5,h6{
 hr{
 	border:0;
 	border-top:1px solid #eee;
-	margin:20px 0
+	margin:20px 0;
 }
 .w3-image{
 	max-width:100%;
@@ -665,6 +659,12 @@ a{
 	.w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .w3-btn,.w3-dropdown-hover.w3-mobile .w3-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .w3-btn,.w3-dropdown-click.w3-mobile .w3-button{
 		width:100%
 }
+}
+
+@media (min-width:600px){
+	.w3-show-small{
+		display:none!important
+ }
 }
 @media (max-width:768px){
 	.w3-modal-content{
