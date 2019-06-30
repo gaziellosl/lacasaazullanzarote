@@ -12,7 +12,6 @@ function hamburgerMenu() {
 function showSlides(n, id, to=null) {
   var i;
   if (to!=null){slideIndex[n]=to;}
-  console.log(slideIndex[n]);
   var slides = document.getElementsByClassName("slides_"+id);
   var dots = document.getElementsByClassName("dot_"+id);
   if (slideIndex[n] > slides.length-1) {slideIndex[n] = 0}
@@ -42,7 +41,6 @@ var slideIndex = []
 
 function initDivMouseOver(id)   {
    var div = document.getElementById("slideshow-container_"+id);
-   console.log("HELLO")
    div.mouseIsOver = false;
    div.onmouseover = function()   {
       this.mouseIsOver = true;
