@@ -42,7 +42,7 @@ def parseCSV(dir):
 
     return data
 
-def generateHTMLFile(dir, data, sections, language):
+def generateHTMLFile(dir, data, sections, language, name):
 
     text = ""
     text += """
@@ -192,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
 </body>
 </html>
 """
-    with open(dir+'/../index.html', 'w') as file:
+    with open(dir+'/../'+ name, 'w') as file:
         file.write(text)
 
 def insertSlidesShow(n, section, language):
@@ -255,7 +255,8 @@ def main():
     for i in range(len(files)):
         sections.append(parseCSV(dir+"/sections/"+files[i]))
         sections[-1]['id'] = files[i][1:-4]
-    generateHTMLFile(dir, data, sections, "spanish")
+    generateHTMLFile(dir, data, sections, "spanish", "es.html")
+    generateHTMLFile(dir, data, sections, "english", "en.html")
 
 if __name__ == '__main__':
     main()
