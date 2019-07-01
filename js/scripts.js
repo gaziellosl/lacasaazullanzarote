@@ -7,6 +7,15 @@ function hamburgerMenu() {
   }
 }
 
+function dropDownClick() {
+  var x = document.getElementById("dropdown_reserve");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
 // Slides
 
 function showSlides(n, id, to=null) {

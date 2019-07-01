@@ -469,29 +469,32 @@ h1, h2, h3, h4, h5, h6 {
   <!-- Reserve Section -->
   <div class="w3-container w3-padding-64" id="reserve">
     <h1>Reserva</h1><br>
-    <p>Complete el formulario y le contestaremos con la mayor brevedad posible.</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Nombre" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Correo electrónico" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16" type="number" placeholder="Número de personas" required name="People"></p>
-      <p class="w3-input w3-padding-16" style="color:grey;">
+    <p class="w3-xlarge">Complete el formulario y le contestaremos con la mayor brevedad posible!</p>
+      <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="Nombre" required name="Name"></p>
+      <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="Correo electrónico" required name="Email"></p>
+      <p class="w3-large"><input class="w3-input w3-padding-16" type="number" placeholder="Número de personas" required name="People"></p>
+      <p class="w3-large w3-input w3-padding-16" style="color:grey;">
         Apartamento:
-      <select class="dropdown" required name="Appartment">
-        <option value="Cualquiera">Cualquiera</option>
-        <option value="Timanfaya">Timanfaya</option>
-        <option value="Jameos">Jameos</option>
-        <option value="La Cueva">La Cueva</option>
-        <option value="Mirador">Mirador</option>
-      </select>
+        <div class="w3-dropdown-click">
+          <button onclick="dropDownClick()" class="w3-button w3-black">Cualquiera</button>
+          <div id="dropdown_reserve" class="w3-large w3-dropdown-content w3-bar-block w3-border">
+            <div class="w3-bar-item w3-button" value="Any">Cualquiera</div>
+            <div class="w3-bar-item w3-button" value="Timanfaya">Timanfaya</div>
+            <div class="w3-bar-item w3-button" value="Jameos">Jameos</div>
+            <div class="w3-bar-item w3-button" value="La Cueva">La Cueva</div>
+            <div class="w3-bar-item w3-button" value="Mirador">Mirador</div>
+          </div>
+        </div>
       </p>
-      <p><input class="w3-input w3-padding-16" type="number" placeholder="Número de noches" required name="Noches"></p>
-      <p class="w3-input w3-padding-16" style="color:grey;">A partir del:     <input class="dropdown" type="datetime-local" placeholder="Date and time" required name="date" value="2019-01-01T16:00"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
-      <p><button class="w3-button w3-light-grey w3-section" type="submit">Solicitar reserva</button></p>
-    </form>
+      <p class="w3-large"><input class="w3-input w3-padding-16" type="number" placeholder="Número de noches" required name="Noches"></p>
+      <p class="w3-large w3-input w3-padding-16" style="color:grey;">From:     <input class="dropdown" type="datetime-local" placeholder="Date and time" required name="date" value="2019-01-01T16:00"></p>
+      <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="Mensaje (opcional)" required name="Message"></p>
+      <p class="w3-large"><button class="w3-button w3-light-grey w3-section" type="submit">Solicitar reserva</button></p>
   </div>
 
 </div>
+
+
 
 <footer class="w3-center w3-light-grey w3-padding-32">
     <div class="w3-row">

@@ -1,5 +1,17 @@
 var; spanish; english;
 home; La Casa Azul; La Casa Azul;
 about; Apartamentos; Appartments;
+
 reserve; Reserva; Reserve;
+reserve_description; Complete el formulario y le contestaremos con la mayor brevedad posible!; Fill out the form and we will contact you as soon as possible!;
+any; Cualquiera; Any;
+name; Nombre; Name;
+email; Correo electrónico; Email;
+people; Número de personas; Quantity of people;
+appartment; Apartamento:; Appartment:;
+nights; Número de noches; Quantity of nights;
+from; From:; A partir de:;
+message; Mensaje (opcional); Message (optional);
+reserveButton; Solicitar reserva; Request a booking;
+
 contact; Contacto; Contact;
