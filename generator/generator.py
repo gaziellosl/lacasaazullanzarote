@@ -142,8 +142,7 @@ h1, h2, h3, h4, h5, h6 {
   <hr>
 """
 
-    text += """"
-
+    text += """
   <!-- Reserve Section -->
   <div class="w3-container w3-padding-64" id="reserve">
     <h1>Reserva</h1><br>
@@ -173,50 +172,19 @@ h1, h2, h3, h4, h5, h6 {
 
 <footer class="w3-center w3-light-grey w3-padding-32">
     <div class="w3-row">
-        <!-- <div class="w3-left w3-padding-large">
-            <img class src="./img/logo_casa_azul.jpg" alt="">
-        </div> -->
-        <div class="w3-left m6 w3-padding-large">
-            <img class="widthLogo" src="./img/logo_casa_azul.jpg" alt="Logo">
-            <p>Calle las Salinas, 30, 35542 Punta Mujeres, Las Palma</p>
-            <p><a href="gaziellosl@gmail.com" title="Email Address">gaziellosl@gmail.com</a></p>
-            <p><a href="tel:+34 670727113" title="Telephone number">+34 670 727 113</a></p>
-
-        </div>
-        <div class="w3-right m6 w3-padding-large">
-
-            <a target="_blank" href="https://www.instagram.com/pharmaseal.co/">
-                <div class="social__circle"><i class="fab fa-instagram fa-1x"></i></div>
-            </a>
-
-            <a target="_blank" href="https://www.linkedin.com/company/pharmaseal/">
-                <div class="social__circle"><i class="fab fa-linkedin-in fa-1x"></i></div>
-            </a>
-
-            <a target="_blank" href="https://twitter.com/pharmaseal">
-                <div class="social__circle"><i class="fab fa-twitter fa-1x"></i></div>
-            </a>
-
-            <a target="_blank" href="https://www.facebook.com/casaazullanzarote">
-                <div class="social__circle"><i class="fab fa-facebook-f fa-1x"></i></div>
-            </a>
-
-        </div>
+      <div class="w3-left m6 w3-padding-large">
+          <img class="widthLogo" src="./img/logo_casa_azul.jpg" alt="Logo">
       </div>
-
-      <div class="w3-row">
-
-        <div class="w3-right m6 w3-padding-large">
-
-            <a href="/sitemap.xml/" class="has-text-white">Sitemap</a>
-
-            <a href="/cookie-policy/" class="has-text-white">Cookies</a>
-
-            <a href="/privacy-policy/" class="has-text-white">Privacy Policy</a>
-
-            <a href="/terms-conditions/" class="has-text-white">Terms and conditions</a>
-
-        </div>
+      <div class="w3-centered m6 w3-padding-large">
+          <p>Calle las Salinas, 30, 35542 Punta Mujeres, Las Palma</p>
+          <p><a href="gaziellosl@gmail.com" title="Email Address">gaziellosl@gmail.com</a></p>
+          <p><a href="tel:+34 670727113" title="Telephone number">+34 670 727 113</a></p>
+      </div>
+      <div class="w3-right m6 w3-padding-large">
+        <a target="_blank" href="https://www.facebook.com/casaazullanzarote">
+            <div class="w3-button" style="border-radius:50%;background-color:white"><i class="fa fa-facebook"></i></div>
+        </a>
+      </div>
     </div>
 </footer>
 
@@ -231,7 +199,7 @@ def insertSlidesShow(n, section, language):
 
     text = ""
     text += """
-    <div class="w3-col m6 w3-padding-xlarge w3-hide-small" id="slideshow-container_{}" data-aos="zoom-left" data-aos-anchor-placement="top-bottom">
+    <div class="w3-col m6 w3-padding-xlarge w3-hide-small" id="slideshow-container_{}" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
 
     <!-- Slideshow container -->
     <div class="slideshow-container" style="max-width:90%;padding-top:15%">
@@ -243,8 +211,8 @@ def insertSlidesShow(n, section, language):
         text += """
       <div class="slides fade slides_{}">
         <div class="numbertext">{} / 3</div>
-        <img src="./img/{}/{}" style="width:100%">
-        <div class="text">{}</div>
+        <img src="./img/{}/{}" style="width:100%;">
+        <div class="textSlides">{}</div>
       </div>
 """.format(section['id'], i+1, section['id'], section['imgs']['id'][i], section['imgs'][language][i])
 
