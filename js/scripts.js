@@ -67,17 +67,16 @@ function initDivMouseOver(id)   {
    return div;
 }
 
+var dropdowns =[]
 document.onclick = function(event) {
     // Compensate for IE<9's non-standard event model
     //
     // if (event===undefined) event= window.event;
     // var target= 'target' in event? event.target : event.srcElement;
     // alert('clicked on '+target.tagName);
-    for (dropdownName of dropdownNames) {
-      dropdown = document.getElementById(dropdownName)
-      button = document.getElementById(dropdownName + '_button')
-      if (dropdown.style.display != "none" && (!dropdown.mouseIsOver && !button.mouseIsOver)){
-        dropdown.style.display = "none";
+    for (dropdown of dropdowns) {
+      if (dropdown[0].style.display != "none" && (!dropdown[0].mouseIsOver && !dropdown[1].mouseIsOver)){
+        dropdown[0].style.display = "none";
       }
     }
 };
