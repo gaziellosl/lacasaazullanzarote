@@ -1,18 +1,25 @@
-function hamburgerMenu() {
-  var x = document.getElementById("hamburguer_links");
+
+
+// function dropDownClick(id) {
+//   var x = document.getElementById(id);
+//   if (x.className.indexOf("w3-show") == -1) {
+//     x.className += " w3-show";
+//   } else {
+//     x.className = x.className.replace(" w3-show", "");
+//   }
+// }
+
+function dropDownClick(id, callback) {
+
+  var x = document.getElementById(id);
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {
     x.style.display = "block";
   }
-}
 
-function dropDownClick() {
-  var x = document.getElementById("dropdown_reserve");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
+  if (typeof callback === 'function' && callback()){
+    callback();
   }
 }
 
@@ -62,4 +69,8 @@ function initDivMouseOver(id)   {
    //       ....
    //    }
    // }
+}
+
+function setLanguage(language) {
+  document.cookie = "language=" + language + "; expires=Thu, 8 Dec 2033 12:00:00 UTC";
 }

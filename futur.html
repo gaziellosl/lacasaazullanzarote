@@ -23,15 +23,11 @@
     }
   }
 
-  function setLanguage(language) {
-    document.cookie = "language=" + language + "; expires=Thu, 8 Dec 2033 12:00:00 UTC";
-  }
-
   if (language != "") {
     window.location.href = language;
   } else {
-    // Select language
-    window.location.href = "language";
+    // No language, just redirect to spanish site
+    window.location.href = "es";
   }
 
 </script>

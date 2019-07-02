@@ -2,6 +2,10 @@ img {
     image-orientation: from-image;
 }
 
+.fa {
+  background-position: 50% 50%;
+}
+
 .square {
   background-color: red;
   width: 30px;

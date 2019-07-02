@@ -1,4 +1,11 @@
 # coding=utf-8
+
+# TODO
+# - Apartado localización y como llegar. Tambien proponer traslado aeropuerto
+# - Actividades extra (turismo disponible)
+# - Reserva boton gordo inciio
+# -
+
 import os
 
 def parseCSV(dir):
@@ -69,25 +76,47 @@ h1, h2, h3, h4, h5, h6 {
 }
 </style>
 <body>
+""" % (data["home"][language])
+
+    text += """
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-    <a href="#home" class="w3-bar-item w3-button">La Casa Azul</a>
+    <a href="#home" class="w3-bar-item w3-button">{}</a>
     <div class="w3-right w3-hide-small" id="links">
-      <a href="#about" class="w3-bar-item w3-button">Apartamentos</a>
-      <a href="#reserve" class="w3-bar-item w3-button">Reserva</a>
+      <a href="#{}" class="w3-bar-item w3-button">{}</a>
+      <a href="#reserve" class="w3-bar-item w3-button">{}</a>
+      <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-hide-small" onclick="dropDownClick('dropdown_language')">
+        <i class="fa fa-globe"></i>
+      </a>
+      <div id="dropdown_language" class="w3-medium w3-dropdown-content w3-bar-block w3-border"  style="margin-right: 15px;margin-top: 40px; right:0;float:right;">
+        <a href="es" onclick="selectLanguage('es')" class="w3-bar-item w3-button">Español</a>
+        <a href="en" onclick="selectLanguage('en')" class="w3-bar-item w3-button" value="Timanfaya">English</a>
+        <a href="fr" onclick="selectLanguage('fr')" class="w3-bar-item w3-button" value="Jameos">Français</a>
+        <a href="it" onclick="selectLanguage('it')" class="w3-bar-item w3-button" value="La Cueva">Italiano</a>
+        <a href="de" onclick="selectLanguage('de')" class="w3-bar-item w3-button" value="Mirador">Deutsch</a>
+      </div>
     </div>
     <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-    <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-show-small" onclick="hamburgerMenu()">
+    <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-show-small" onclick="dropDownClick('hamburguer_links')">
       <i class="fa fa-bars"></i>
     </a>
     <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-show-small" style="display:none;" id="hamburguer_links">
       <hr style="margin-bottom:0;margin-top:45px">
-      <a href="#about" class="w3-bar-block w3-button" onclick="hamburgerMenu()" >Apartamentos</a>
+      <a href="#{}" class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick('hamburguer_links')" >{}</a>
       <hr style="margin:0">
-      <a href="#reserve" class="w3-bar-block w3-button" onclick="hamburgerMenu()">Reserva</a>
+      <a href="#reserve" class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick('hamburguer_links')">{}</a>
+      <hr style="margin:0">
+      <a class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick('dropdown_language_hamburguer')">{}</a>
+    </div>
+    <div id="dropdown_language_hamburguer" class="w3-medium w3-dropdown-content w3-bar-block w3-border"  style="margin-right: 15px;">
+        <a href="es" onclick="dropDownClick('dropdown_language_hamburguer', selectLanguage('es'))" class="w3-bar-item w3-button">Español</a>
+        <a href="en" onclick="dropDownClick('dropdown_language_hamburguer', selectLanguage('en'))" class="w3-bar-item w3-button" value="Timanfaya">English</a>
+        <a href="fr" onclick="dropDownClick('dropdown_language_hamburguer', selectLanguage('fr'))" class="w3-bar-item w3-button" value="Jameos">Français</a>
+        <a href="it" onclick="dropDownClick('dropdown_language_hamburguer', selectLanguage('it'))" class="w3-bar-item w3-button" value="La Cueva">Italiano</a>
+        <a href="de" onclick="dropDownClick('dropdown_language_hamburguer', selectLanguage('de'))" class="w3-bar-item w3-button" value="Mirador">Deutsch</a>
     </div>
   </div>
 </div>
@@ -95,14 +124,24 @@ h1, h2, h3, h4, h5, h6 {
 <header class="fullScreen" style="background-image:url(./img/casa_azul/piscina_natural.jpg)" id="home">
   <img class="w3-display-topright w3-padding-xlarge w3-right widthLogo" style="position:relative;" src="./img/logo_casa_azul.jpg" alt="Logo">
   <div class="w3-display-bottomleft w3-padding-large">
-    <h1 class="bigFont" style="color:white">La Casa Azul</h1>
+    <h1 class="bigFont" style="color:white">{}</h1>
   </div>
 </header>
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:1100px">
 
-""" % (data["home"][language])
+""".format(data["home"][language],
+        sections[0]['id'],
+        data["appartment"][language],
+        data["reserve"][language],
+        sections[0]['id'],
+        data["appartment"][language],
+        data["reserve"][language],
+        data["language"][language],
+        data["home"][language])
+
+
     for i in range(len(sections)):
         section = sections[i]
         text += """
@@ -152,9 +191,9 @@ h1, h2, h3, h4, h5, h6 {
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="{}" required name="Email"></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="number" placeholder="{}" required name="People"></p>
       <p class="w3-large w3-input w3-padding-16" style="color:grey;">
-        {}
+        {}:
         <div class="w3-dropdown-click">
-          <button onclick="dropDownClick()" class="w3-button w3-black">{}</button>
+          <button onclick="dropDownClick('dropdown_reserve')" class="w3-button w3-large">{}</button>
           <div id="dropdown_reserve" class="w3-large w3-dropdown-content w3-bar-block w3-border">
             <div class="w3-bar-item w3-button" value="Any">{}</div>
             <div class="w3-bar-item w3-button" value="Timanfaya">Timanfaya</div>
