@@ -11,7 +11,6 @@
   var name = "language=";
   var language = "";
   var decodedCookie = decodeURIComponent(document.cookie);
-  console.log(decodedCookie);
   var ca = decodedCookie.split(';');
   for(var i = 0; i <ca.length; i++) {
     var c = ca[i];
@@ -29,11 +28,10 @@
   }
 
   if (language != "") {
-    console.log(language);
-    window.location.href = "lacasaazullanzarote.com/" + language;
+    window.location.href = language;
   } else {
     // Select language
-    window.location.href = "lacasaazullanzarote.com/" + "language";
+    window.location.href = + "language";
   }
 
 </script>
