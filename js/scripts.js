@@ -56,7 +56,7 @@ function showSlidesPlus(n, id, plus){
 var slideIndex = []
 
 function initDivMouseOver(id)   {
-   var div = document.getElementById("slideshow-container_"+id);
+   var div = document.getElementById(id);
    div.mouseIsOver = false;
    div.onmouseover = function()   {
       this.mouseIsOver = true;
@@ -64,13 +64,24 @@ function initDivMouseOver(id)   {
    div.onmouseout = function()   {
       this.mouseIsOver = false;
    }
-   // div.onclick = function()   {
-   //    if (this.mouseIsOver)   {
-   //       ....
-   //    }
-   // }
+   return div;
 }
 
+document.onclick = function(event) {
+    // Compensate for IE<9's non-standard event model
+    //
+    // if (event===undefined) event= window.event;
+    // var target= 'target' in event? event.target : event.srcElement;
+    // alert('clicked on '+target.tagName);
+    for (dropdownName of dropdownNames) {
+      dropdown = document.getElementById(dropdownName)
+      button = document.getElementById(dropdownName + '_button')
+      if (dropdown.style.display != "none" && (!dropdown.mouseIsOver && !button.mouseIsOver)){
+        dropdown.style.display = "none";
+      }
+    }
+};
+
 function setLanguage(language) {
-  document.cookie = "language=" + language + "; expires=Thu, 8 Dec 2033 12:00:00 UTC";
+  //document.cookie = "language=" + language + "; expires=Thu, 8 Dec 2033 12:00:00 UTC";
 }

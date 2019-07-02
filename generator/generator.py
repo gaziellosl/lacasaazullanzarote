@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
     <div class="w3-right w3-hide-small" id="links">
       <a href="#{}" class="w3-bar-item w3-button">{}</a>
       <a href="#reserve" class="w3-bar-item w3-button">{}</a>
-      <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-hide-small" onclick="dropDownClick('dropdown_language')">
+      <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-hide-small" onclick="dropDownClick('dropdown_language')" id="dropdown_language_button">
         <i class="fa fa-globe"></i>
       </a>
       <div id="dropdown_language" class="w3-medium w3-dropdown-content w3-bar-block w3-border"  style="margin-right: 15px;margin-top: 40px; right:0;float:right;">
@@ -99,17 +99,17 @@ h1, h2, h3, h4, h5, h6 {
       </div>
     </div>
     <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-    <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-show-small" onclick="dropDownClick('hamburguer_links')">
+    <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-show-small" onclick="dropDownClick('dropdown_hamburguer')" id="dropdown_hamburguer_button">
       <i class="fa fa-bars"></i>
     </a>
     <!-- Right-sided navbar links. Hide them on small screens -->
-    <div class="w3-show-small" style="display:none;" id="hamburguer_links">
+    <div class="w3-show-small" style="display:none;" id="dropdown_hamburguer">
       <hr style="margin-bottom:0;margin-top:45px">
-      <a href="#{}" class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick('hamburguer_links')" >{}</a>
+      <a href="#{}" class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick('dropdown_hamburguer')" >{}</a>
       <hr style="margin:0">
-      <a href="#reserve" class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick('hamburguer_links')">{}</a>
+      <a href="#reserve" class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick('dropdown_hamburguer')">{}</a>
       <hr style="margin:0">
-      <a class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick('dropdown_language_hamburguer')">{}</a>
+      <a class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick('dropdown_language_hamburguer')" id="dropdown_language_hamburguer_button">{}</a>
     </div>
     <div id="dropdown_language_hamburguer" class="w3-medium w3-dropdown-content w3-bar-block w3-border"  style="margin-right: 15px;">
         <a href="es" onclick="dropDownClick('dropdown_language_hamburguer', selectLanguage('es'))" class="w3-bar-item w3-button">Español</a>
@@ -193,13 +193,13 @@ h1, h2, h3, h4, h5, h6 {
       <p class="w3-large w3-input w3-padding-16" style="color:grey;">
         {}:
         <div class="w3-dropdown-click">
-          <button onclick="dropDownClick('dropdown_reserve')" class="w3-button w3-large">{}</button>
+          <button onclick="dropDownClick('dropdown_reserve')" class="w3-button w3-large" id="dropdown_reserve_button">{}</button>
           <div id="dropdown_reserve" class="w3-large w3-dropdown-content w3-bar-block w3-border">
-            <div class="w3-bar-item w3-button" value="Any">{}</div>
+            <div class="w3-bar-item w3-button" value="Mirador">Mirador</div>
             <div class="w3-bar-item w3-button" value="Timanfaya">Timanfaya</div>
             <div class="w3-bar-item w3-button" value="Jameos">Jameos</div>
             <div class="w3-bar-item w3-button" value="La Cueva">La Cueva</div>
-            <div class="w3-bar-item w3-button" value="Mirador">Mirador</div>
+            <div class="w3-bar-item w3-button" value="Any">{}</div>
           </div>
         </div>
       </p>
@@ -296,7 +296,7 @@ def insertSlidesShow(n, section, language):
     <script type="text/javascript">
     slideIndex.push(0);
     showSlides({}, '{}');
-    initDivMouseOver('{}');
+    initDivMouseOver('slideshow-container_{}');
     setInterval(showSlidesPlusWithCheck, 5{}00, {}, '{}', 1);
     </script>
 """.format(n, section['id'], section['id'], i, n, section['id'])
