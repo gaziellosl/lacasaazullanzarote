@@ -83,5 +83,5 @@ document.onclick = function(event) {
 };
 
 function setLanguage(language) {
-  //document.cookie = "language=" + language + "; expires=Thu, 8 Dec 2033 12:00:00 UTC";
+  document.cookie = "language=" + language + "; expires=Thu, 8 Dec 2033 12:00:00 UTC";
 }
