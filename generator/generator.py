@@ -144,9 +144,9 @@ h1, h2, h3, h4, h5, h6 {
 
     text += """
   <!-- Reserve Section -->
-  <div class="w3-container w3-padding-64" id="reserve">
+  <div class="w3-container w3-padding-64" style="margin-right:5vw;margin-left:5vw" id="reserve">
     <h1>{}</h1><br>
-    <p class="w3-xlarge">{}</p>
+    <p class="w3-large">{}</p>
     <form action="/action_page.php" target="_blank">
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="{}" required name="Name"></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="{}" required name="Email"></p>

@@ -467,9 +467,10 @@ h1, h2, h3, h4, h5, h6 {
   <hr>
 
   <!-- Reserve Section -->
-  <div class="w3-container w3-padding-64" id="reserve">
+  <div class="w3-container w3-padding-64" style="margin-right:5vw;margin-left:5vw" id="reserve">
     <h1>Reserva</h1><br>
-    <p class="w3-xlarge">Complete el formulario y le contestaremos con la mayor brevedad posible!</p>
+    <p class="w3-large">Complete el formulario y le contestaremos con la mayor brevedad posible!</p>
+    <form action="/action_page.php" target="_blank">
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="Nombre" required name="Name"></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="Correo electrónico" required name="Email"></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="number" placeholder="Número de personas" required name="People"></p>
@@ -486,10 +487,20 @@ h1, h2, h3, h4, h5, h6 {
           </div>
         </div>
       </p>
+      
+      <div class="w3-row">
+        <div class="w3-col square">
+          hola
+        </div>
+        <div class="w3-col square">
+          adios
+        </div>
+      </div>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="number" placeholder="Número de noches" required name="Noches"></p>
       <p class="w3-large w3-input w3-padding-16" style="color:grey;">From:     <input class="dropdown" type="datetime-local" placeholder="Date and time" required name="date" value="2019-01-01T16:00"></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="Mensaje (opcional)" required name="Message"></p>
       <p class="w3-large"><button class="w3-button w3-light-grey w3-section" type="submit">Solicitar reserva</button></p>
+    </form>
   </div>
 
 </div>

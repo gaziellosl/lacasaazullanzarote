@@ -2,6 +2,12 @@ img {
     image-orientation: from-image;
 }
 
+.square {
+  background-color: red;
+  width: 30px;
+  height: 30px;
+}
+
 select {
    -webkit-appearance: none;
    -moz-appearance: none;
@@ -360,7 +366,7 @@ a{
 	display:block;
 	border:none;
 	border-bottom:1px solid #ccc;
-	width:100%
+	width:100%;
 }
 .w3-select{
 	padding:9px 0;

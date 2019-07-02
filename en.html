@@ -467,9 +467,10 @@ h1, h2, h3, h4, h5, h6 {
   <hr>
 
   <!-- Reserve Section -->
-  <div class="w3-container w3-padding-64" id="reserve">
+  <div class="w3-container w3-padding-64" style="margin-right:5vw;margin-left:5vw" id="reserve">
     <h1>Reserve</h1><br>
-    <p class="w3-xlarge">Fill out the form and we will contact you as soon as possible!</p>
+    <p class="w3-large">Fill out the form and we will contact you as soon as possible!</p>
+    <form action="/action_page.php" target="_blank">
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="number" placeholder="Quantity of people" required name="People"></p>
@@ -490,6 +491,7 @@ h1, h2, h3, h4, h5, h6 {
       <p class="w3-large w3-input w3-padding-16" style="color:grey;">A partir de:     <input class="dropdown" type="datetime-local" placeholder="Date and time" required name="date" value="2019-01-01T16:00"></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="Message (optional)" required name="Message"></p>
       <p class="w3-large"><button class="w3-button w3-light-grey w3-section" type="submit">Request a booking</button></p>
+    </form>
   </div>
 
 </div>
