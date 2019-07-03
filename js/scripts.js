@@ -9,18 +9,36 @@
 //   }
 // }
 
+var dropdowns =[]
+
 function dropDownClick(id, callback) {
 
-  var div = document.getElementById(id);
-  if (div.style.display === "block") {
-    div.style.display = "none";
+  if (dropdowns[id][0].style.display === "block") {
+    dropdowns[id][0].style.display = "none";
   } else {
-    div.style.display = "block";
+    dropdowns[id][0].style.display = "block";
   }
 
   if (typeof callback === 'function' && callback()){
     callback();
   }
+}
+
+document.onclick = function(event) {
+    // Compensate for IE<9's non-standard event model
+    //
+    // if (event===undefined) event= window.event;
+    // var target= 'target' in event? event.target : event.srcElement;
+    // alert('clicked on '+target.tagName);
+    for (dropdown of dropdowns) {
+      if (dropdown[0].style.display != "none" && (!dropdown[0].mouseIsOver && !dropdown[1].mouseIsOver)){
+        dropdown[0].style.display = "none";
+      }
+    }
+};
+
+function setDropDownButtonName(id, val){
+  dropdowns[id][1].innerHTML = val;
 }
 
 // Slides
@@ -67,19 +85,6 @@ function initDivMouseOver(id)   {
    return div;
 }
 
-var dropdowns =[]
-document.onclick = function(event) {
-    // Compensate for IE<9's non-standard event model
-    //
-    // if (event===undefined) event= window.event;
-    // var target= 'target' in event? event.target : event.srcElement;
-    // alert('clicked on '+target.tagName);
-    for (dropdown of dropdowns) {
-      if (dropdown[0].style.display != "none" && (!dropdown[0].mouseIsOver && !dropdown[1].mouseIsOver)){
-        dropdown[0].style.display = "none";
-      }
-    }
-};
 
 function setLanguage(language) {
   document.cookie = "language=" + language + "; expires=Thu, 8 Dec 2033 12:00:00 UTC";

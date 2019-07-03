@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
       <a href="#casa_azul" class="w3-bar-item w3-button">Appartment</a>
       <a href="#location" class="w3-bar-item w3-button">Location</a>
       <a href="#reserve" class="w3-bar-item w3-button">Book</a>
-      <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-hide-small" onclick="dropDownClick('dropdown_language')" id="dropdown_language_button">
+      <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-hide-small" onclick="dropDownClick(3)" id="dropdown_language_button">
         <i class="fa fa-globe"></i>
       </a>
       <div id="dropdown_language" class="w3-medium w3-dropdown-content w3-bar-block w3-border"  style="margin-right: 15px;margin-top: 40px; right:0;float:right;">
@@ -44,26 +44,26 @@ h1, h2, h3, h4, h5, h6 {
       </div>
     </div>
     <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-    <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-show-small" onclick="dropDownClick('dropdown_hamburguer')" id="dropdown_hamburguer_button">
+    <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-show-small" onclick="dropDownClick(1)" id="dropdown_hamburguer_button">
       <i class="fa fa-bars"></i>
     </a>
     <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-show-small" style="display:none;" id="dropdown_hamburguer">
       <hr style="margin-bottom:0;margin-top:45px">
-      <a href="#casa_azul" class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick('dropdown_hamburguer')" >Appartment</a>
+      <a href="#casa_azul" class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick(1)" >Appartment</a>
       <hr style="margin:0">
-      <a href="#location" class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick('dropdown_hamburguer')">Location</a>
+      <a href="#location" class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick(1)">Location</a>
       <hr style="margin:0">
-      <a href="#reserve" class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick('dropdown_hamburguer')">Book</a>
+      <a href="#reserve" class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick(1)">Book</a>
       <hr style="margin:0">
-      <a class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick('dropdown_language_hamburguer')" id="dropdown_language_hamburguer_button">Language</a>
+      <a class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick(2)" id="dropdown_language_hamburguer_button">Language</a>
     </div>
     <div id="dropdown_language_hamburguer" class="w3-medium w3-dropdown-content w3-bar-block w3-border"  style="margin-right: 15px;">
-        <a href="es" onclick="dropDownClick('dropdown_language_hamburguer', setLanguage('es'))" class="w3-bar-item w3-button">Español</a>
-        <a href="en" onclick="dropDownClick('dropdown_language_hamburguer', setLanguage('en'))" class="w3-bar-item w3-button" value="Timanfaya">English</a>
-        <a href="fr" onclick="dropDownClick('dropdown_language_hamburguer', setLanguage('fr'))" class="w3-bar-item w3-button" value="Jameos">Français</a>
-        <a href="it" onclick="dropDownClick('dropdown_language_hamburguer', setLanguage('it'))" class="w3-bar-item w3-button" value="La Cueva">Italiano</a>
-        <a href="de" onclick="dropDownClick('dropdown_language_hamburguer', setLanguage('de'))" class="w3-bar-item w3-button" value="Mirador">Deutsch</a>
+        <a href="es" onclick="dropDownClick(2, setLanguage('es'))" class="w3-bar-item w3-button">Español</a>
+        <a href="en" onclick="dropDownClick(2, setLanguage('en'))" class="w3-bar-item w3-button" value="Timanfaya">English</a>
+        <a href="fr" onclick="dropDownClick(2, setLanguage('fr'))" class="w3-bar-item w3-button" value="Jameos">Français</a>
+        <a href="it" onclick="dropDownClick(2, setLanguage('it'))" class="w3-bar-item w3-button" value="La Cueva">Italiano</a>
+        <a href="de" onclick="dropDownClick(2, setLanguage('de'))" class="w3-bar-item w3-button" value="Mirador">Deutsch</a>
     </div>
   </div>
 </div>
@@ -500,13 +500,13 @@ h1, h2, h3, h4, h5, h6 {
       <p class="w3-large w3-input w3-padding-16" style="color:grey;">
         Appartment:
         <div class="w3-dropdown-click">
-          <button onclick="dropDownClick('dropdown_reserve')" class="w3-button w3-large" id="dropdown_reserve_button">Any</button>
+          <button onclick="dropDownClick(0)" class="w3-button w3-large" id="dropdown_reserve_button">Any</button>
           <div id="dropdown_reserve" class="w3-large w3-dropdown-content w3-bar-block w3-border">
-            <div class="w3-bar-item w3-button" value="Mirador">Mirador</div>
-            <div class="w3-bar-item w3-button" value="Timanfaya">Timanfaya</div>
-            <div class="w3-bar-item w3-button" value="Jameos">Jameos</div>
-            <div class="w3-bar-item w3-button" value="La Cueva">La Cueva</div>
-            <div class="w3-bar-item w3-button" value="Any">Any</div>
+            <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, 'Mirador'))" value="Mirador">Mirador</div>
+            <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, 'Timanfaya'))" value="Timanfaya">Timanfaya</div>
+            <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, 'Jameos'))" value="Jameos">Jameos</div>
+            <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, 'La Cueva'))" value="La Cueva">La Cueva</div>
+            <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, 'Any'))" value="Any">Any</div>
           </div>
         </div>
       </p>

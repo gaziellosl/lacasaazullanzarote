@@ -3,7 +3,16 @@ img {
 }
 
 .fa {
+  background-repeat: no-repeat;
   background-position: 50% 50%;
+}
+
+.icon_logo {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
 
 .square {
