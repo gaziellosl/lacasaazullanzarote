@@ -11,11 +11,11 @@
 
 function dropDownClick(id, callback) {
 
-  var x = document.getElementById(id);
-  if (x.style.display === "block") {
-    x.style.display = "none";
+  var div = document.getElementById(id);
+  if (div.style.display === "block") {
+    div.style.display = "none";
   } else {
-    x.style.display = "block";
+    div.style.display = "block";
   }
 
   if (typeof callback === 'function' && callback()){

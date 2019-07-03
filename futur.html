@@ -27,7 +27,18 @@
     window.location.href = language;
   } else {
     // No language, just redirect to spanish site
-    window.location.href = "es";
+    switch (navigator.language.substring(0,2)){
+      case 'en':
+        window.location.href = "en";
+      case 'de':
+        window.location.href = "de";
+      case 'it':
+        window.location.href = "it";
+      case 'fr':
+        window.location.href = "fr";
+      default:
+        window.location.href = "es";
+      }
   }
 
 </script>

@@ -86,6 +86,7 @@ h1, h2, h3, h4, h5, h6 {
     <a href="#home" class="w3-bar-item w3-button">{}</a>
     <div class="w3-right w3-hide-small" id="links">
       <a href="#{}" class="w3-bar-item w3-button">{}</a>
+      <a href="#location" class="w3-bar-item w3-button">{}</a>
       <a href="#reserve" class="w3-bar-item w3-button">{}</a>
       <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-hide-small" onclick="dropDownClick('dropdown_language')" id="dropdown_language_button">
         <i class="fa fa-globe"></i>
@@ -106,6 +107,8 @@ h1, h2, h3, h4, h5, h6 {
     <div class="w3-show-small" style="display:none;" id="dropdown_hamburguer">
       <hr style="margin-bottom:0;margin-top:45px">
       <a href="#{}" class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick('dropdown_hamburguer')" >{}</a>
+      <hr style="margin:0">
+      <a href="#location" class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick('dropdown_hamburguer')">{}</a>
       <hr style="margin:0">
       <a href="#reserve" class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick('dropdown_hamburguer')">{}</a>
       <hr style="margin:0">
@@ -134,9 +137,11 @@ h1, h2, h3, h4, h5, h6 {
 """.format(data["home"][language],
         sections[0]['id'],
         data["appartment"][language],
+        data["location"][language],
         data["reserve"][language],
         sections[0]['id'],
         data["appartment"][language],
+        data["location"][language],
         data["reserve"][language],
         data["language"][language],
         data["home"][language])
@@ -237,11 +242,11 @@ h1, h2, h3, h4, h5, h6 {
           <p>Calle las Salinas, 30, 35542 Punta Mujeres, Las Palma</p>
           <p><a href="gaziellosl@gmail.com" title="Email Address">gaziellosl@gmail.com</a></p>
           <p><a href="tel:+34 670727113" title="Telephone number">+34 670 727 113</a></p>
-      </div>
-      <div class="w3-right m6 w3-padding-large">
-        <a target="_blank" href="https://www.facebook.com/casaazullanzarote">
-            <div class="w3-button" style="border-radius:50%;background-color:white"><i class="fa fa-facebook"></i></div>
-        </a>
+          <a target="_blank" href="https://www.facebook.com/casaazullanzarote">
+            <div class="w3-button" style="border-radius:50%;background-color:#3b5998">
+              <i class="fa fa-facebook"></i>
+            </div>
+          </a>
       </div>
     </div>
 </footer>
