@@ -243,9 +243,19 @@ h1, h2, h3, h4, h5, h6 {
           <p>Calle las Salinas, 30, 35542 Punta Mujeres, Las Palma</p>
           <p><a href="gaziellosl@gmail.com" title="Email Address">gaziellosl@gmail.com</a></p>
           <p><a href="tel:+34 670727113" title="Telephone number">+34 670 727 113</a></p>
-          <a target="_blank" href="https://www.facebook.com/casaazullanzarote">
-            <div class="w3-button" style="border-radius:50%;background-color:#3b5998">
-              <i class="fa fa-facebook"></i>
+          <a href="https://www.facebook.com/casaazullanzarote" style="text-decoration: none;">
+            <div class=" w3-button">
+              <div class="icon_logo" style="background-image:url(./img/logo/facebook.png)"></div>
+            </div>
+          </a>
+          <a href="https://www.airbnb.com/users/show/174871850" style="text-decoration: none;">
+            <div class=" w3-button">
+              <div class="icon_logo" style="background-image:url(./img/logo/airbnb.png)"></div>
+            </div>
+          </a>
+          <a href="https://www.booking.com/hotel/es/casa-azul-punta-mujeres.es.html" style="text-decoration: none;">
+            <div class=" w3-button">
+              <div class="icon_logo" style="background-image:url(./img/logo/booking.png)"></div>
             </div>
           </a>
       </div>

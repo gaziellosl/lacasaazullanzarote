@@ -7,6 +7,19 @@ img {
   background-position: 50% 50%;
 }
 
+
+.empty {
+  border:none;
+  display:inline-block;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  background-color:inherit;
+  text-align:center;
+  white-space:nowrap
+}
+
 .icon_logo {
     width: 40px;
     height: 40px;
