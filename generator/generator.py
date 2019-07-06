@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
     text += """
 
 <!-- Map Section -->
-<div class="w3-container w3-padding-64" style="margin-right:5vw;margin-left:5vw" id="map">
+<div class="w3-container w3-padding-64" style="margin-right:5vw;margin-left:5vw" id="location">
   <div class="w3-col m6 w3-padding-large slide_container_middle" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
     <h1 class="w3-center">{}</h1><br>
     <p class="w3-large">{}</p>
