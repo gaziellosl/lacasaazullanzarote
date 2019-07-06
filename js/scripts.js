@@ -12,7 +12,6 @@
 var dropdowns =[]
 
 function dropDownClick(id, callback) {
-
   if (dropdowns[id][0].style.display === "block") {
     dropdowns[id][0].style.display = "none";
   } else {
