@@ -129,6 +129,7 @@ h1, h2, h3, h4, h5, h6 {
   <div class="w3-display-bottomleft w3-padding-large">
     <h1 class="bigFont" style="color:white">{}</h1>
   </div>
+  <a href="#reserve" class="redButton"> <br style="line-height:105px"> RESERVA <br> AHORA!</a>
 </header>
 
 <!-- Page content -->
@@ -153,38 +154,24 @@ h1, h2, h3, h4, h5, h6 {
 
 <!-- {} Section -->
 
-  <div class="w3-row w3-padding-64" id="{}">
+  <div class="w3-row w3-padding-64 slider_container" id="{}">
 """.format(section['id'], section['id'])
-        if i%2: #impares
-            text += insertSlidesShow(i, section, language)
+
+        text += insertSlidesShow(i, section, language)
 
         text += """
 
-    <div class="w3-col m6 w3-padding-xlarge" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
+    <div class="w3-col m6 w3-padding-xlarge slide_container_middle" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
       <h1 class="w3-center">{}</h1><br>
       <h5 class="w3-center">{}</h5>
       <p class="w3-large">{}</p>
       <p class="w3-large w3-text-grey w3-hide-medium">{}
       </p>
     </div>
+  </div>
+<hr>
 """.format(section['title'][language],section['subtitle'][language],section['description'][language],section['subdescription'][language])
-        if not (i%2): #impares
-            text += insertSlidesShow(i, section, language)
-        text += """
-    </div>
-"""
-#         text += """
-#
-# <div class="w3-col m6 w3-padding-large w3-show-small" id="slideshow-container_{}" style="height:100%;margin:0;margin-top:80px;margin-bottom:auto" data-aos="fade-left" data-aos-anchor-placement="center-bottom">
-# """.format(section['id'])
-#         text += insertSlidesShow(i, section, language)
-#         text += """
-# </div>
-# """
 
-        text += """
-  <hr>
-"""
 
     text += """
   <!-- Reserve Section -->
@@ -272,14 +259,21 @@ h1, h2, h3, h4, h5, h6 {
 def insertSlidesShow(n, section, language):
 
     text = ""
-    text += """
-    <div class="w3-col m6 w3-padding-xlarge w3-hide-small" id="slideshow-container_{}" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
+    if (n%2==0):
+        text += """
+    <div class="w3-col m6 w3-padding-xlarge slide_container_right" id="slideshow-container_{}" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
+""".format(section['id'])
+    else:
+        text += """
+    <div class="w3-col m6 w3-padding-xlarge slide_container_left" id="slideshow-container_{}" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
+""".format(section['id'])
 
+    text += """
     <!-- Slideshow container -->
     <div class="slideshow-container" style="max-width:90%;padding-top:15%">
 
       <!-- Full-width images with number and caption text -->
-""".format(section['id'])
+"""
 
     for i in range(len(section['imgs']['id'])):
         text += """

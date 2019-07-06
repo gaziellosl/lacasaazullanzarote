@@ -7,6 +7,62 @@ img {
   background-position: 50% 50%;
 }
 
+.slider_container {
+  display: flex;
+	flex-flow: row wrap;
+}
+
+
+.slide_container_middle {
+  order: 2;
+}
+
+.slide_container_right {
+  order: 3;
+}
+
+.slide_container_left {
+  order: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .slide_container_middle {
+    order: 2;
+  }
+
+  .slide_container_right {
+    order: 3;
+  }
+
+  .slide_container_left {
+    order: 4;
+  }
+}
+
+.redButton {
+  background-image: url(./../img/logo/button.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position:absolute;
+  height: 30vh;
+  width: 30vw;
+  margin-top: 10vh;
+  text-align: center;
+  line-height: 2vw;
+  color: white;
+  font-family: "Helvetica";
+  font-weight: bold;
+  font-size: 2vw;
+  text-decoration:none;
+}
+.redButton:hover {
+  background-image: url(./../img/logo/button_hover.png);
+}
+
+.redButton:active {
+  background-image: url(./../img/logo/button_pressed.png);
+}
 
 .empty {
   border:none;
