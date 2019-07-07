@@ -304,7 +304,7 @@ def insertSlidesShow(n, section, language):
         text += """
       <div class="slides fade slides_{}">
         <div class="numbertext">{} / 3</div>
-        <img src="./img/{}/{}" style="width:100%;">
+        <div class="img_container" style="background-image: url(./img/{}/{})"></div>
         <div class="textSlides">{}</div>
       </div>
 """.format(section['id'], i+1, section['id'], section['imgs']['id'][i], section['imgs'][language][i])
