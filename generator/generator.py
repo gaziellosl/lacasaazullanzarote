@@ -129,7 +129,6 @@ h1, h2, h3, h4, h5, h6 {
   <div class="w3-display-bottomleft w3-padding-large">
     <h1 class="bigFont" style="color:white">{}</h1>
   </div>
-  <a href="#reserve" class="redButton"> <br style="line-height:105px"> RESERVA <br> AHORA!</a>
 </header>
 
 <!-- Page content -->
@@ -146,6 +145,9 @@ h1, h2, h3, h4, h5, h6 {
         data["reserve"][language],
         data["language"][language],
         data["home"][language])
+
+        #<a href="#reserve" class="redButton"> <br style="line-height:105px"> RESERVA <br> AHORA!</a>
+
 
 
     for i in range(len(sections)):
