@@ -42,6 +42,33 @@ function setDropDownButtonName(id, val){
 
 // Slides
 
+function sendEmail() {
+  var obj = document.getElementsByClassName("w3-input")
+  var i;
+  var body = "";
+  var date = document.getElementById("dateForm").value;
+  var appartment = document.getElementById("dropdown_reserve_button").innerHTML;
+  var subject = "Web%20Reserve:%20" + appartment + ".%20" + date;
+
+  body += document.getElementById("appartmentFormTitle").innerHTML + "%20"
+    + appartment + "%0D%0A";
+  var dateTitle = document.getElementById("dateFormTitle").innerHTML;
+  body += dateTitle.substring(0, dateTitle.indexOf("<")) + ":%20"
+    + date + "%0D%0A";
+
+  var text = "mailto:gaziellosl@gmail.com?subject=" + subject + "&body=" + body;
+  for (i=0;i<obj.length;i++){
+    var placeholder = obj.item(i).placeholder;
+    var value = obj.item(i).value
+    if (value != null){
+      body += placeholder + ":%20" + value + "%0D%0A";
+    }
+  }
+
+  var text = "mailto:gaziellosl@gmail.com?subject=" + subject + "&body=" + body;
+  window.open(text);
+}
+
 function showSlides(n, id, to=null) {
   var i;
   if (to!=null){slideIndex[n]=to;}

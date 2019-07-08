@@ -203,26 +203,24 @@ h1, h2, h3, h4, h5, h6 {
   <div class="w3-container w3-padding-64" style="margin-right:5vw;margin-left:5vw" id="reserve">
     <h1>{}</h1><br>
     <p class="w3-large">{}</p>
-    <form action="/action_page.php" target="_blank">
+    <form onsubmit="sendEmail(); return false;">
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="{}" required name="Name"></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="{}" required name="Email"></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="number" placeholder="{}" required name="People"></p>
-      <p class="w3-large w3-input w3-padding-16" style="color:grey;">
-        {}:
-        <div class="w3-dropdown-click">
-          <button onclick="dropDownClick(0)" class="w3-button w3-large" id="dropdown_reserve_button">{}</button>
-          <div id="dropdown_reserve" class="w3-large w3-dropdown-content w3-bar-block w3-border">
-            <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, 'Mirador'))" value="Mirador">Mirador</div>
-            <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, 'Timanfaya'))" value="Timanfaya">Timanfaya</div>
-            <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, 'Jameos'))" value="Jameos">Jameos</div>
-            <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, 'La Cueva'))" value="La Cueva">La Cueva</div>
-            <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, '{}'))" value="Any">{}</div>
-          </div>
-        </div>
-      </p>
+      <div class="w3-dropdown-click" style="position:absolute;margin-left:120px;">
+      <button onclick="dropDownClick(0)" class="w3-button w3-large w3-light-grey" id="dropdown_reserve_button" type="button">{}</button>
+      <div id="dropdown_reserve" class="w3-large w3-dropdown-content w3-bar-block w3-border">
+        <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, 'Mirador'))" value="Mirador">Mirador</div>
+        <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, 'Timanfaya'))" value="Timanfaya">Timanfaya</div>
+        <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, 'Jameos'))" value="Jameos">Jameos</div>
+        <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, 'La Cueva'))" value="La Cueva">La Cueva</div>
+        <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, '{}'))" value="Any">{}</div>
+      </div>
+      </div>
+      <p class="w3-large w3-input w3-padding-16" style="color:grey;" id="appartmentFormTitle" >{}:</p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="number" placeholder="{}" required name="Noches"></p>
-      <p class="w3-large w3-input w3-padding-16" style="color:grey;">{}     <input class="dropdown" type="datetime-local" placeholder="Date and time" required name="date" value="2019-01-01T16:00"></p>
-      <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="{}" required name="Message"></p>
+      <p class="w3-large w3-input w3-padding-16" style="color:grey;" id="dateFormTitle">{}     <input id="dateForm" class="dropdown" type="datetime-local" placeholder="Date and time" required name="date" ></p>
+      <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="{}" ></p>
       <p class="w3-large"><button class="w3-button w3-light-grey w3-section" type="submit">{}</button></p>
     </form>
   </div>
@@ -234,10 +232,10 @@ h1, h2, h3, h4, h5, h6 {
     data["name"][language],
     data["email"][language],
     data["people"][language],
+    data["any"][language],
+    data["any"][language],
+    data["any"][language],
     data["appartment"][language],
-    data["any"][language],
-    data["any"][language],
-    data["any"][language],
     data["nights"][language],
     data["from"][language],
     data["message"][language],

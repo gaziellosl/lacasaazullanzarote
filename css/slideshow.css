@@ -50,13 +50,12 @@
   bottom: -15px;
   width: 100%;
   text-align: center;
-  font-weight: bold;
   background-color: white;
 }
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: black;
+  color: grey;
   font-size: 12px;
   font-weight: bold;
   padding: 8px 12px;
