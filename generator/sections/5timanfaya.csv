@@ -1,6 +1,7 @@
-var; spanish; english; french;id;
-title; Timanfaya; Timanfaya;;
-subtitle; Ideal para la familia; Ideal for the family;;
-description; Hola; Baby;;
-subdescription; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book;;
-imgs; salon.jpg, baño.jpg, baño2.jpg; salon.jpg, baño.jpg, baño2.jpg; salon.jpg, baño.jpg, baño2.jpg;salon.jpg, baño.jpg, baño2.jpg;
+var; spanish; english; french;id
+title; Timanfaya; Timanfaya;Timanfaya;
+subtitle; Ideal para la familia; Ideal for the family;Idéal pour un famille;
+description; Hola; Baby; Situé au premier étage, c'est un appartement de deux chambres, un salon-cuisine et une salle de bain avec baignoire. Chambres à coucher spacieuse avec chacune 2 lits jumeaux.;
+subdescription; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book;L'accès se fait par la rue Las Salinas.;
+imgs; salon.jpg, baño.jpg, baño2.jpg; salon.jpg, baño.jpg, baño2.jpg; salon.jpg, baño.jpg, baño2.jpg;salon.jpg, baño.jpg, baño2.jpg
+price;;;70;

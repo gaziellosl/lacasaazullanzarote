@@ -172,13 +172,18 @@ h1, h2, h3, h4, h5, h6 {
       <h1 class="w3-center">{}</h1><br>
       <h5 class="w3-center">{}</h5>
       <p class="w3-large">{}</p>
-      <p class="w3-large w3-text-grey w3-hide-medium">{}
-      </p>
+      <p class="w3-large w3-text-grey w3-hide-medium">{}</p>
+""".format(section['title'][language],section['subtitle'][language],section['description'][language],section['subdescription'][language])
+
+        if 'price' in section:
+            text += """
+      <p class="w3-large w3-tag w3-light-grey">{}: {}€/{}</p>""".format(data["price"][language], section["price"]['id'], data["night"][language])
+
+        text += """
     </div>
   </div>
 <hr>
-""".format(section['title'][language],section['subtitle'][language],section['description'][language],section['subdescription'][language])
-
+"""
     text += """
 
 <!-- Map Section -->
@@ -200,7 +205,7 @@ h1, h2, h3, h4, h5, h6 {
     data["directions"][language],
     data["transfer"][language],
     data["transfer_description"][language],
-    data["people"][language],
+    data["people"][language]
     )
 
     text += """
