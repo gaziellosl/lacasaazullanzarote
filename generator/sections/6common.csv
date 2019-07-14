@@ -1,6 +1,6 @@
-var; spanish; english; id;
+var; spanish; english; french;id;
 title;Zonas Comunes; Common Areas;;
-subtitle;Ideal para bbq; Ideal for bbq;
+subtitle;Ideal para bbq; Ideal for bbq;;
 description; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book;;
 subdescription; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book;;
-imgs; BBQ_1.jpg, solarium.jpg, table.jpg; BBQ_1.jpg, solarium.jpg, table.jpg;BBQ_1.jpg, solarium.jpg, table.jpg;
+imgs; BBQ_1.jpg, solarium.jpg, table.jpg; BBQ_1.jpg, solarium.jpg, table.jpg;BBQ_1.jpg, solarium.jpg, table.jpg;BBQ_1.jpg, solarium.jpg, table.jpg;

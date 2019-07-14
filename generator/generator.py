@@ -8,7 +8,7 @@
 
 import os
 
-def parseCSV(dir):
+def parseCSV(dir, stdout=0):
 
     with open(dir, 'r') as file:
         text = file.read()
@@ -33,10 +33,15 @@ def parseCSV(dir):
         text[0][i] = text[0][i].replace(" ", "")
 
     data = {}
-    for i in range(1,len(text)):
+    for i in range(1,len(text)): #lines
         if text[i][0] != '':
             data[text[i][0]] = {}
-            for j in range(1, len(text[0])):
+            for j in range(1, (min(len(text[0]),len(text[i])))):
+                if stdout:
+                    print(i,j)
+                    print(text[i][0])
+                    print(text[0][j])
+                    print(text[i][j].strip())
                 if text[i][0] == "imgs":
                     data[text[i][0]][text[0][j]] = [x.strip() for x in text[i][j].split(',')]
 
@@ -214,14 +219,13 @@ h1, h2, h3, h4, h5, h6 {
         <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, 'Timanfaya'))" value="Timanfaya">Timanfaya</div>
         <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, 'Jameos'))" value="Jameos">Jameos</div>
         <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, 'La Cueva'))" value="La Cueva">La Cueva</div>
-        <div class="w3-bar-item w3-button" onclick="dropDownClick(0, setDropDownButtonName(0, '{}'))" value="Any">{}</div>
       </div>
       </div>
       <p class="w3-large w3-input w3-padding-16" style="color:grey;" id="appartmentFormTitle" >{}:</p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="number" placeholder="{}" required name="Noches"></p>
-      <p class="w3-large w3-input w3-padding-16" style="color:grey;" id="dateFormTitle">{}     <input id="dateForm" class="dropdown" type="datetime-local" placeholder="Date and time" required name="date" ></p>
+      <p class="w3-large w3-input w3-padding-16" style="color:grey;" id="dateFormTitle">{}     <input id="dateForm" class="dropdown" type="date" placeholder="Date" required name="date" ></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="{}" ></p>
-      <p class="w3-large"><button class="w3-button w3-light-grey w3-section" type="submit">{}</button></p>
+      <p class="w3-large"><button class="w3-button w3-light-grey w3-section w3-right" type="submit">{}</button></p>
     </form>
   </div>
 
@@ -232,9 +236,7 @@ h1, h2, h3, h4, h5, h6 {
     data["name"][language],
     data["email"][language],
     data["people"][language],
-    data["any"][language],
-    data["any"][language],
-    data["any"][language],
+    data["appartment"][language],
     data["appartment"][language],
     data["nights"][language],
     data["from"][language],
@@ -348,6 +350,7 @@ def main():
         sections[-1]['id'] = files[i][1:-4]
     generateHTMLFile(dir, data, sections, "spanish", "es.html")
     generateHTMLFile(dir, data, sections, "english", "en.html")
+    generateHTMLFile(dir, data, sections, "french", "fr.html")
 
 if __name__ == '__main__':
     main()
