@@ -97,11 +97,11 @@ h1, h2, h3, h4, h5, h6 {
         <i class="fa fa-globe"></i>
       </a>
       <div id="dropdown_language" class="w3-medium w3-dropdown-content w3-bar-block w3-border"  style="margin-right: 15px;margin-top: 40px; right:0;float:right;">
-        <a href="es" onclick="languageChanged('es')" class="w3-bar-item w3-button">Español</a>
-        <a href="en" onclick="languageChanged('en')" class="w3-bar-item w3-button">English</a>
-        <a href="fr" onclick="languageChanged('fr')" class="w3-bar-item w3-button">Français</a>
-        <a href="it" onclick="languageChanged('it')" class="w3-bar-item w3-button">Italiano</a>
-        <a href="de" onclick="languageChanged('de')" class="w3-bar-item w3-button">Deutsch</a>
+        <div onclick="languageChanged('es')" class="w3-bar-item w3-button">Español</div>
+        <div onclick="languageChanged('en')" class="w3-bar-item w3-button">English</div>
+        <div onclick="languageChanged('fr')" class="w3-bar-item w3-button">Français</div>
+        <div onclick="languageChanged('it')" class="w3-bar-item w3-button">Italiano</div>
+        <div onclick="languageChanged('de')" class="w3-bar-item w3-button">Deutsch</div>
       </div>
     </div>
     <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
@@ -120,11 +120,11 @@ h1, h2, h3, h4, h5, h6 {
       <a class="w3-bar-block w3-button" style="width:100%;text-align:left" onclick="dropDownClick(2)" id="dropdown_language_hamburguer_button">{}</a>
     </div>
     <div id="dropdown_language_hamburguer" class="w3-medium w3-dropdown-content w3-bar-block w3-border"  style="margin-right: 15px;">
-        <a href="es" onclick="dropDownClick(2, languageChanged('es'))" class="w3-bar-item w3-button">Español</a>
-        <a href="en" onclick="dropDownClick(2, languageChanged('en'))" class="w3-bar-item w3-button">English</a>
-        <a href="fr" onclick="dropDownClick(2, languageChanged('fr'))" class="w3-bar-item w3-button">Français</a>
-        <a href="it" onclick="dropDownClick(2, languageChanged('it'))" class="w3-bar-item w3-button">Italiano</a>
-        <a href="de" onclick="dropDownClick(2, languageChanged('de'))" class="w3-bar-item w3-button">Deutsch</a>
+        <div onclick="dropDownClick(2, languageChanged('es'))" class="w3-bar-item w3-button">Español</div>
+        <div onclick="dropDownClick(2, languageChanged('en'))" class="w3-bar-item w3-button">English</div>
+        <div onclick="dropDownClick(2, languageChanged('fr'))" class="w3-bar-item w3-button">Français</div>
+        <div onclick="dropDownClick(2, languageChanged('it'))" class="w3-bar-item w3-button">Italiano</div>
+        <div onclick="dropDownClick(2, languageChanged('de'))" class="w3-bar-item w3-button">Deutsch</div>
     </div>
   </div>
 </div>
