@@ -6,6 +6,10 @@ language; Lengua; Language; Langue;
 price; Precio; Price; Prix;
 night; noche; night; nuit;
 
+commodities;Comodidades; Commodities; Commodités;
+commodities_subtitle;;; On fourni tout le necessaire;
+commodities_description;; ; Tous les appartements sont complètement équipés: grille-pain, cafetière, bouilloire, plancha, plaque de cuisson, micro-ondes-grill, réfrigérateur et ménage. Les appartements on aussi une WIFI disponible, une TV, un stéréo et accès au chaînes locales. Dans la zones communes vous aussi y trouver aussi une machine à laver et un fer a repasser.;
+
 location; Localización; Location; Localisation
 find; ¿Dónde estamos?; Where can you find us?; Ou sommes-nous?
 directions; primera linea de la playa. Punta mujeres, desde el aeropuerto 40 min etc; more directions ifnormation; xxfrancais
@@ -14,6 +18,7 @@ transfer_description; Por x blab lablbalba lbalbla balal; Por x blab lablbalba l
 
 reserve; Reservar; Book; Réserver;
 reserve_description; Complete el formulario y le contestaremos con la mayor brevedad posible.; Fill out the form and we will contact you as soon as possible.; Complétez le formulaire et nous vous contacterons aussi vite que possible.;
+reserve_conditions; Exigimos un mínimo de 4 noches.; min; MIN 3 noches + 30€ limpieza;
 name; Nombre; Name; Prénom;
 email; Correo electrónico; Email; Courrier Électronique;
 any; Correo electrónico; Email; Courrier Électronique;

@@ -153,8 +153,6 @@ h1, h2, h3, h4, h5, h6 {
 
         #<a href="#reserve" class="redButton"> <br style="line-height:105px"> RESERVA <br> AHORA!</a>
 
-
-
     for i in range(len(sections)):
         section = sections[i]
         text += """
@@ -186,8 +184,27 @@ h1, h2, h3, h4, h5, h6 {
 """
     text += """
 
+<!-- Commodities Section -->
+<div class="slider_container w3-container w3-padding-64" style="margin-right:5vw;margin-left:5vw" id="location">
+  <div class="w3-col m6 w3-padding-large slide_container_middle" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
+    <h1 class="w3-center">{}</h1><br>
+    <h5 class="w3-center">{}</h5>
+    <p class="w3-large">{}</p>
+  </div>
+  <div class="w3-col m6 w3-padding-large slide_container_right" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
+        <div class="img_container" style="background-image: url(./img/commodities/all.png)"></div>
+  </div>
+</div>
+<hr>
+""".format(data["commodities"][language],
+    data["commodities_subtitle"][language],
+    data["commodities_description"][language],
+    )
+
+    text += """
+
 <!-- Map Section -->
-<div class="w3-container w3-padding-64" style="margin-right:5vw;margin-left:5vw" id="location">
+<div class="slider_container w3-container w3-padding-64" style="margin-right:5vw;margin-left:5vw" id="location">
   <div class="w3-col m6 w3-padding-large slide_container_middle" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
     <h1 class="w3-center">{}</h1><br>
     <p class="w3-large">{}</p>
@@ -213,6 +230,7 @@ h1, h2, h3, h4, h5, h6 {
   <div class="w3-container w3-padding-64" style="margin-right:5vw;margin-left:5vw" id="reserve">
     <h1>{}</h1><br>
     <p class="w3-large">{}</p>
+    <p class="w3-large">{}</p>
     <form onsubmit="sendEmail(); return false;">
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="{}" required name="Name"></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="{}" required name="Email"></p>
@@ -227,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
       </div>
       </div>
       <p class="w3-large w3-input w3-padding-16" style="color:grey;" id="appartmentFormTitle" >{}:</p>
-      <p class="w3-large"><input class="w3-input w3-padding-16" type="number" placeholder="{}" required name="Noches"></p>
+      <p class="w3-large"><input class="w3-input w3-padding-16" type="number" placeholder="{}" required name="Noches" min="4"></p>
       <p class="w3-large w3-input w3-padding-16" style="color:grey;" id="dateFormTitle">{}     <input id="dateForm" class="dropdown" type="date" placeholder="Date" required name="date" ></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="{}" ></p>
       <p class="w3-large"><button class="w3-button w3-light-grey w3-section w3-right" type="submit">{}</button></p>
@@ -238,6 +256,7 @@ h1, h2, h3, h4, h5, h6 {
 
 """.format(data["reserve"][language],
     data["reserve_description"][language],
+    data["reserve_conditions"][language],
     data["name"][language],
     data["email"][language],
     data["people"][language],
@@ -308,11 +327,11 @@ def insertSlidesShow(n, section, language):
     for i in range(len(section['imgs']['id'])):
         text += """
       <div class="slides fade slides_{}">
-        <div class="numbertext">{} / 3</div>
+        <div class="numbertext">{} / {}</div>
         <div class="img_container" style="background-image: url(./img/{}/{})"></div>
         <div class="textSlides">{}</div>
       </div>
-""".format(section['id'], i+1, section['id'], section['imgs']['id'][i], section['imgs'][language][i])
+""".format(section['id'], i+1, len(section['imgs']['id']), section['id'], section['imgs']['id'][i], section['imgs'][language][i])
 
     text += """
       <!-- Next and previous buttons -->
