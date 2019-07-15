@@ -111,6 +111,10 @@ function initDivMouseOver(id)   {
    return div;
 }
 
+function languageChanged(language) {
+  setLanguage(language);
+  window.location = "/" + language;
+}
 
 function setLanguage(language) {
   document.cookie = "language=" + language + "; expires=Thu, 8 Dec 2033 12:00:00 UTC";
