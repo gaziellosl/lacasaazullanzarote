@@ -204,12 +204,12 @@ h1, h2, h3, h4, h5, h6 {
     text += """
 
 <!-- Map Section -->
-<div class="slider_container w3-container w3-padding-64" style="margin-right:5vw;margin-left:5vw" id="location">
+<div class="slider_container w3-container w3-padding-64" style="margin-right:5vw;margin-left:0" id="location">
   <div class="w3-col m6 w3-padding-large slide_container_middle" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
     <h1 class="w3-center">{}</h1><br>
     <p class="w3-large">{}</p>
+    <br>
     <h5 class="w3-center">{}</h5>
-    <p class="w3-large">{}</p>
   </div>
   <div class="w3-col m6 w3-padding-large slide_container_left" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
      <iframe style="width:100%;height:55vh;" id="gmap_canvas" src="https://maps.google.com/maps?q=Calle%20las%20Salinas%2C%2030%2C%2035542%20Punta%20Mujeres%2C%20Las%20Palma&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
@@ -221,7 +221,6 @@ h1, h2, h3, h4, h5, h6 {
 """.format(data["find"][language],
     data["directions"][language],
     data["transfer"][language],
-    data["transfer_description"][language],
     data["people"][language]
     )
 

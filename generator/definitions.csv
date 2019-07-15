@@ -7,18 +7,17 @@ price; Precio; Price; Prix;
 night; noche; night; nuit;
 
 commodities;Comodidades; Commodities; Commodités;
-commodities_subtitle;;; On fournit tout le necessaire;
-commodities_description;; ; Tous les appartements sont complètement équipés: grille-pain, cafetière, bouilloire, plancha, plaque de cuisson, micro-ondes-grill, réfrigérateur et ménage. Les appartements ont aussi WIFI gratuite, une TV avec les chaines nationals, satellite et un lecteur CD stéréo. Dans les zones communes vous pourrez aussi y trouver une machine à laver et un fer a repasser.;
+commodities_subtitle;;; On fournit tout le nécessaire;
+commodities_description;; ; Tous les appartements sont totalement équipés: grille-pain, cafetière, bouilloire, plancha, plaque de cuisson, micro-ondes-grill, réfrigérateur et ménage. Les appartements ont aussi WIFI gratuite, une TV avec les chaines nationales, satellite et un lecteur CD stéréo. Dans les zones communes vous pourrez aussi trouver une machine à laver, fer et table à repasser.;
 
 location; Localización; Location; Localisation
-find; ¿Dónde estamos?; Where can you find us?; Ou sommes-nous?
-directions; primera linea de la playa. Punta mujeres, desde el aeropuerto 40 min etc; more directions ifnormation; xxfrancais
-transfer; Organizamos tu desplazamiento!; We can organize your transfer; Nous pouvons organiser votre transfer;
-transfer_description; Por x blab lablbalba lbalbla balal; Por x blab lablbalba lbalbla balal; blabla;
+find; ¿Dónde estamos?; Where can you find us?; Où sommes-nous?
+directions; primera linea de la playa. Punta mujeres, desde el aeropuerto 40 min etc; more directions ifnormation; Nous sommes situés a 40min de l'aéroport. A 100m se trouve un mini-market. À 5km se trouvent deux grands centres touristiques: Jameos del Agua et La Cueva de los Verdes et à 12km se trouve el Mirador del Río;
+transfer; Organizamos tu desplazamiento!; We can organize your transfer; Nous pouvons organiser votre transfert, demandez nous!;
 
 reserve; Reservar; Book; Réserver;
 reserve_description; Complete el formulario y le contestaremos con la mayor brevedad posible.; Fill out the form and we will contact you as soon as possible.; Complétez le formulaire et nous vous contacterons aussi vite que possible.;
-reserve_conditions; Exigimos un mínimo de 4 noches.; min; MIN 3 noches + 30€ limpieza;
+reserve_conditions; Exigimos un mínimo de 4 noches.; min; Nous n'acceptons pas de reserves de moins de trois nuits. Si vous louez moins de 7 nuits, vous devrez payer un suplément de 30€ pour le ménage.;
 name; Nombre; Name; Prénom;
 email; Correo electrónico; Email; Courrier Électronique;
 any; Correo electrónico; Email; Courrier Électronique;
