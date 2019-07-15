@@ -7,17 +7,17 @@ price; Precio; Price; Prix;
 night; noche; night; nuit;
 
 commodities;Comodidades; Commodities; Commodités;
-commodities_subtitle;;; On fournit tout le nécessaire;
-commodities_description;; ; Tous les appartements sont totalement équipés: grille-pain, cafetière, bouilloire, plancha, plaque de cuisson, micro-ondes-grill, réfrigérateur et ménage. Les appartements ont aussi WIFI gratuite, une TV avec les chaines nationales, satellite et un lecteur CD stéréo. Dans les zones communes vous pourrez aussi trouver une machine à laver, fer et table à repasser.;
+commodities_subtitle;Ofrecemos todo lo necesario;We provide all the necessary; On fournit tout le nécessaire;
+commodities_description;Todos los apartamentos están totalmente equipados: tostadora, cafetera, tetera, plancha, vitrocerámicas, microondas-grill, refrigerador y menaje. Los apartamentos también cuentan con WIFI gratuito, TV con canales nacionales, satélite y reproductor de CD estéreo. En las zonas comunes también se puede encontrar una lavadora, una plancha y una tabla de planchar.;All apartments are fully equipped: toaster, coffee maker, kettle, griddle, hob, microwave-grill, refrigerator and household. The apartments also have free WIFI, a TV with national channels, satellite and a stereo CD player. In common areas you can also find a washing machine, an iron and an ironing board.; Tous les appartements sont totalement équipés: grille-pain, cafetière, bouilloire, plancha, plaques de cuisson, micro-ondes-grill, réfrigérateur et ménage. Les appartements ont aussi WIFI gratuite, une TV avec les chaines nationales, satellite et un lecteur CD stéréo. Dans les zones communes vous pourrez aussi trouver une machine à laver, fer et table à repasser.;
 
-location; Localización; Location; Localisation
-find; ¿Dónde estamos?; Where can you find us?; Où sommes-nous?
-directions; primera linea de la playa. Punta mujeres, desde el aeropuerto 40 min etc; more directions ifnormation; Nous sommes situés a 40min de l'aéroport. A 100m se trouve un mini-market. À 5km se trouvent deux grands centres touristiques: Jameos del Agua et La Cueva de los Verdes et à 12km se trouve el Mirador del Río;
-transfer; Organizamos tu desplazamiento!; We can organize your transfer; Nous pouvons organiser votre transfert, demandez nous!;
+location; Localización; Location; Localisation;
+find; ¿Dónde estamos?; Where can you find us?; Où sommes-nous?;
+directions; Estamos ubicados a 40 minutos del aeropuerto. A 100m hay un supermercado. A 5 km de distancia se encuentran dos de los principales centros turísticos de Lanzarote: Jameos del Agua y La Cueva de los Verdes, y a 12 km se encuentra El Mirador del Río; We are located 40 minutes from the airport. There is a mini-market 100m nearby. 5km away are two major tourist centers: Jameos del Agua and La Cueva de los Verdes and 12km away is El Mirador del Río; Nous sommes situés a 40min de l'aéroport. A 100m se trouve un mini-market. À 5km se trouvent deux grands centres touristiques: Jameos del Agua et La Cueva de los Verdes et à 12km se trouve el Mirador del Río;
+transfer; Podemos organizar tu desplazamiento; We can organize your transfer; Nous pouvons organiser votre transfert, demandez nous!;
 
 reserve; Reservar; Book; Réserver;
 reserve_description; Complete el formulario y le contestaremos con la mayor brevedad posible.; Fill out the form and we will contact you as soon as possible.; Complétez le formulaire et nous vous contacterons aussi vite que possible.;
-reserve_conditions; Exigimos un mínimo de 4 noches.; min; Nous n'acceptons pas de reserves de moins de trois nuits. Si vous louez moins de 7 nuits, vous devrez payer un suplément de 30€ pour le ménage.;
+reserve_conditions; Exigimos un mínimo de 4 noches.; min; Nous n'acceptons pas de reserves de moins de 3 nuits. Si vous louez moins de 7 nuits, vous devrez payer un suplément de 30€ pour le ménage.;
 name; Nombre; Name; Prénom;
 email; Correo electrónico; Email; Courrier Électronique;
 any; Correo electrónico; Email; Courrier Électronique;
