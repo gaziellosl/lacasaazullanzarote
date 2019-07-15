@@ -13,6 +13,7 @@ img {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  image-orientation: from-image;
 }
 
 .slider_container {
