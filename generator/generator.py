@@ -129,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
   </div>
 </div>
 
-<header class="fullScreen" style="background-image:url(./img/casa_azul/piscina_natural.jpg)" id="home">
+<header class="fullScreen" style="background-image:url(./img_original/casa_azul/piscina_natural.jpg)" id="home">
   <img class="w3-display-topright w3-padding-xlarge w3-right widthLogo" style="position:relative;" src="./img/logo_casa_azul.jpg" alt="Logo">
   <div class="w3-display-bottomleft w3-padding-large">
     <h1 class="bigFont" style="color:white">{}</h1>
