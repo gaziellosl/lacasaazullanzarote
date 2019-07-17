@@ -193,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
     <p class="w3-large">{}</p>
   </div>
   <div class="w3-col m6 w3-padding-large slide_container_right" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
-        <div class="img_container" style="background-image: url(./img/commodities/all.png)"></div>
+        <div class="img_container" style="background-image: url(./img_original/commodities/all.png)"></div>
   </div>
 </div>
 <hr>
@@ -281,17 +281,17 @@ h1, h2, h3, h4, h5, h6 {
           <p><a href="tel:+34 670727113" title="Telephone number">+34 670 727 113</a></p>
           <a href="https://www.facebook.com/casaazullanzarote" style="text-decoration: none;">
             <div class=" w3-button">
-              <div class="icon_logo" style="background-image:url(./img/logo/facebook.png)"></div>
+              <div class="icon_logo" style="background-image:url(./img_original/logo/facebook.png)"></div>
             </div>
           </a>
           <a href="https://www.airbnb.com/users/show/174871850" style="text-decoration: none;">
             <div class=" w3-button">
-              <div class="icon_logo" style="background-image:url(./img/logo/airbnb.png)"></div>
+              <div class="icon_logo" style="background-image:url(./img_original/logo/airbnb.png)"></div>
             </div>
           </a>
           <a href="https://www.booking.com/hotel/es/casa-azul-punta-mujeres.es.html" style="text-decoration: none;">
             <div class=" w3-button">
-              <div class="icon_logo" style="background-image:url(./img/logo/booking.png)"></div>
+              <div class="icon_logo" style="background-image:url(./img_original/logo/booking.png)"></div>
             </div>
           </a>
       </div>
