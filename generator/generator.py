@@ -155,6 +155,7 @@ h1, h2, h3, h4, h5, h6 {
 
     for i in range(len(sections)):
         section = sections[i]
+        print("Generating Section: ", section['id'])
         text += """
 
 <!-- {} Section -->
@@ -371,8 +372,11 @@ def main():
     for i in range(len(files)):
         sections.append(parseCSV(dir+"/sections/"+files[i]))
         sections[-1]['id'] = files[i][1:-4]
+    print("Generating spanish html")
     generateHTMLFile(dir, data, sections, "spanish", "es.html")
+    print("Generating english html")
     generateHTMLFile(dir, data, sections, "english", "en.html")
+    print("Generating french html")
     generateHTMLFile(dir, data, sections, "french", "fr.html")
 
 if __name__ == '__main__':
