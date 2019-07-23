@@ -1,7 +1,12 @@
-console.log("init this bitch");
+const express = require('express');
+const app = express();
+const port = 3000;
 
-var express = require('express');
-var app = express();
+ console.log("INITTTTITNTNNFJDJJDJ");
+
+app.get('/', (req, res) => res.send('Hello World!'));
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 
 // var nodemailer = require('nodemailer');
@@ -47,8 +52,8 @@ var app = express();
 //     }
 //   });
 // })
-
-// Finally, start our server
-app.listen(3000, function() {
-  console.log('Listening for reserves in www.lacasaazullanzarote.com !')
-})
+//
+// // Finally, start our server
+// app.listen(3000, function() {
+//   console.log('Listening for reserves in www.lacasaazullanzarote.com !')
+// })
