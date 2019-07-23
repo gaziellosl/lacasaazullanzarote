@@ -1,5 +1,7 @@
-var express = require('express')
-var app = express()
+console.log("init this bitch");
+
+var express = require('express');
+var app = express();
 
 
 // var nodemailer = require('nodemailer');
