@@ -1,0 +1,22 @@
+{
+  "name": "lacasaazul_server",
+  "version": "1.0.0",
+  "description": "server responses for la casa azul",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaziellosl/lacasaazul_server.git"
+  },
+  "author": "Alexis Gaziello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gaziellosl/lacasaazul_server/issues"
+  },
+  "homepage": "https://github.com/gaziellosl/lacasaazul_server#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

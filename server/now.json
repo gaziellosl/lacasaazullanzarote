@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "alias": "www.lacasaazullanzarote.com",
+  "name": "lacasaazul_server",
+  "builds": [
+       { "src": "*.js",
+         "use": "@now/node-server"
+       }
+   ],
+   "routes": [
+        { "src": "/(.*)",
+          "dest": "index.js"
+        }
+    ]
+}
