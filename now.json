@@ -3,12 +3,12 @@
   "alias": "www.lacasaazullanzarote.com",
   "name": "lacasaazul_server",
   "builds": [
-       { "src": "*.js",
+       { "src": "server/*.js",
          "use": "@now/node-server"
        }
    ],
    "routes": [
-        { "src": "/(.*)",
+        { "src": "server/(.*)",
           "dest": "index.js"
         }
     ]
