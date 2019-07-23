@@ -375,11 +375,11 @@ def main():
         sections.append(parseCSV(dir+"/sections/"+files[i]))
         sections[-1]['id'] = files[i][1:-4]
     print("Generating spanish html")
-    generateHTMLFile(dir, data, sections, "spanish", "es.html")
+    generateHTMLFile(dir, data, sections, "spanish", "html/es.html")
     print("Generating english html")
-    generateHTMLFile(dir, data, sections, "english", "en.html")
+    generateHTMLFile(dir, data, sections, "english", "html/en.html")
     print("Generating french html")
-    generateHTMLFile(dir, data, sections, "french", "fr.html")
+    generateHTMLFile(dir, data, sections, "french", "html/fr.html")
 
 if __name__ == '__main__':
     main()
