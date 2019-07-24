@@ -4,7 +4,10 @@ const port = 3000;
 
  console.log("INITTTTITNTNNFJDJJDJ");
 
-app.get('/hello', (req, res) => res.send('Hello World!'));
+ // Home route
+ app.get("/", (req, res) => {
+   res.send("Welcome to a basic express App");
+ });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 

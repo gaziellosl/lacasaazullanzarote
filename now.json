@@ -7,12 +7,10 @@
        }
    ],
    "routes": [
-        { "src": "/reservation",
-          "dest": "/server/index.js"
-        },
-        { "src": "/hello",
+        {
+          "src": "/",
           "dest": "/server/index.js",
-          "methods": ["POST"]
+          "methods": ["GET"]
         }
     ]
 }
