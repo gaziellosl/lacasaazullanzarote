@@ -9,7 +9,7 @@
    "routes": [
         { "src": "/reservation",
           "dest": "index.js"
-        }
+        },
         { "src": "/hello",
           "dest": "index.js",
           "methods": ["GET"]
