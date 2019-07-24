@@ -12,7 +12,7 @@
         },
         { "src": "/hello",
           "dest": "index.js",
-          "methods": ["GET"]
+          "methods": ["POST"]
         }
     ]
 }
