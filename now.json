@@ -11,7 +11,7 @@
           "dest": "index.js"
         }
         { "src": "/hello",
-          "dest": "index.js"
+          "dest": "index.js",
           "methods": ["GET"]
         }
     ]
