@@ -2,9 +2,9 @@
   "name": "lacasaazul_server",
   "version": "1.0.0",
   "description": "Server responses for la casa azul",
-  "main": "reservations.js",
+  "main": "index.js",
   "scripts": {
-    "test": "node reservation.js"
+    "test": "node index.js"
   },
   "repository": {
     "type": "git",
