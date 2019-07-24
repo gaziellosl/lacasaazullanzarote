@@ -2,13 +2,13 @@
   "version": 2,
   "name": "lacasaazul_server",
   "builds": [
-       { "src": "server/*.js",
+       { "src": "server/reservation.js",
          "use": "@now/node-server"
        }
    ],
    "routes": [
-        { "src": "server/(.*)",
-          "dest": "index.js"
+        { "src": "/reservation",
+          "dest": "reservation.js"
         }
     ]
 }
