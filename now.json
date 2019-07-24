@@ -8,10 +8,10 @@
    ],
    "routes": [
         { "src": "/reservation",
-          "dest": "index.js"
+          "dest": "/server/index.js"
         },
         { "src": "/hello",
-          "dest": "index.js",
+          "dest": "/server/index.js",
           "methods": ["POST"]
         }
     ]
