@@ -73,6 +73,16 @@ def generateHTMLFile(dir, data, sections, language, name):
 <link rel="stylesheet" href="./lib/aos/aos.css" />
 <script src="./lib/aos/aos.js"></script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145871683-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145871683-1');
+</script>
+
 <style>
 body {font-family: "Times New Roman", Georgia, Serif;}
 h1, h2, h3, h4, h5, h6 {

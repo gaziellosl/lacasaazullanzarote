@@ -10,7 +10,7 @@
         {
           "src": "/reservation",
           "dest": "/server/index.js",
-          "methods": ["GET"]
+          "methods": ["POST"]
         }
     ]
 }

@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get("/reservation", (req, res) => {
+app.post("/reservation", (req, res) => {
  res.send("Welcome to a basic express App");
 });
 
