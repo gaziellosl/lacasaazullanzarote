@@ -6,7 +6,9 @@ app.get("/reservation", (req, res) => {
  res.send("Welcome to a basic express App");
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}!`)
+});
 
 
 // var nodemailer = require('nodemailer');
