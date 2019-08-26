@@ -42,6 +42,11 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+	
+  .slider_container {
+    flex-direction: column;
+  }
+	
   .slide_container_middle {
     order: 2;
   }
