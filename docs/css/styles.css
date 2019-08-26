@@ -25,7 +25,7 @@ img {
   display: -webkit-flex; /* NEW - Chrome */
   display: flex;  
   flex-direction: row;
-  flex-flow: row wrap;
+  flex-wrap: nowrap;
 }
 
 
