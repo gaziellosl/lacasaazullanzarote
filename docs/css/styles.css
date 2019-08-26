@@ -23,7 +23,7 @@ img {
   display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;  /* TWEENER - IE 10 */
   display: -webkit-flex; /* NEW - Chrome */
-  display: flex;  
+  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
@@ -42,11 +42,11 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-	
+
   .slider_container {
     flex-direction: column;
   }
-	
+
   .slide_container_middle {
     order: 2;
   }
@@ -766,7 +766,7 @@ a{
 		max-width:95%
 }
 }
-@media (max-width:600px){
+@media (max-width:768px){
 	.w3-modal-content{
 		margin:0 10px;
 		width:auto!important
@@ -792,7 +792,7 @@ a{
 }
 }
 
-@media (min-width:600px){
+@media (min-width:768px){
 	.w3-show-small{
 		display:none!important
  }
