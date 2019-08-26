@@ -24,6 +24,7 @@ img {
   display: -ms-flexbox;  /* TWEENER - IE 10 */
   display: -webkit-flex; /* NEW - Chrome */
   display: flex;  
+  flex-direction: row;
   flex-flow: row wrap;
 }
 
