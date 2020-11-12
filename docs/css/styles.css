@@ -58,6 +58,12 @@ img {
   .slide_container_left {
     order: 4;
   }
+
+  .image_fix{
+	width: 80vw;
+	height: 40vh;
+	margin-left: -5%;
+  }
 }
 
 .redButton {

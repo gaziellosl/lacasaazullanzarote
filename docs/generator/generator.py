@@ -204,7 +204,7 @@ h1, h2, h3, h4, h5, h6 {
     <h5 class="w3-center">{}</h5>
     <p class="w3-large">{}</p>
   </div>
-  <div class="w3-col m6 w3-padding-large slide_container_right" data-aos="flip-left" data-aos-anchor-placement="top-bottom" style="height:45vh;width:45vh;">
+  <div class="w3-col m6 w3-padding-large slide_container_right image_fix" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
         <div class="img_container" style="background-image: url(./img_original/commodities/all.png)"></div>
   </div>
 </div>
