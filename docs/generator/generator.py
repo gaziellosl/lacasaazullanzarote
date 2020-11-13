@@ -258,7 +258,7 @@ h1, h2, h3, h4, h5, h6 {
       <p class="w3-large w3-input w3-padding-16" style="color:grey;" id="appartmentFormTitle" >{}:</p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="number" placeholder="{}" required name="Noches" min="3"></p>
       <p class="w3-large w3-input w3-padding-16" style="color:grey;" id="dateFormTitle">{}     <input id="dateForm" class="dropdown" type="date" placeholder="Date" required name="date" ></p>
-      <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="{}" ></p>
+      <p class="w3-large"><textarea class="w3-input w3-padding-16" type="text" style="min-height: 200px;" placeholder="{}" ></textarea></p>
       <p class="w3-large"><button class="w3-button w3-light-grey w3-section w3-right" type="submit">{}</button></p>
     </form>
   </div>
