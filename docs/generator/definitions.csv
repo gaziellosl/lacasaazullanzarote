@@ -29,3 +29,11 @@ message; Mensaje o petición especial (opcional); Message or special request (op
 reserveButton; Solicitar reserva; Request a booking; Soliciter une reservation;
 
 contact; Contacto; Contact; Contact;
+
+error; Error; Error; Erreur;
+error_description; Ha ocurrido un error en el servidor. Porfavor, envíenos un mail a la dirección de correo electrónico bgaziello@gmail.com con su información e indíquenos que ha habido un problema con la web.; Some unexpected error occured with our server. Please send us un email to bgaziello@gmail.com with your information and let us know that you had some issues with the website.; Une erreur s'est produite dans le serveur. S'il vous plaît, veuillez envoyer un courriel à bgaziello@gmail.com en indiquant vos coordonnées et en précisant qu'il y a eu un problème avec le site web.;
+
+success; Éxito; Success; Succès
+success_description; ¡Gracias! Su petición se realizó con éxito. Le contestaremos por correo electrónico con la mayor brevedad posible.; Thank you! Your request was successfully made. We will answer you by email as soon as possible.; Merci! Votre demande a été reçu. Nous vous répondrons par courrier électronique dans les plus brefs délais.;
+
+send_email; Enviar email; Send email; Envoyer courriel;

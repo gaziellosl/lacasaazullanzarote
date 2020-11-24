@@ -240,9 +240,11 @@ h1, h2, h3, h4, h5, h6 {
   <!-- Reserve Section -->
   <div class="w3-container w3-padding-64" style="margin-right:5vw;margin-left:5vw" id="reserve">
     <h1>{}</h1><br>
-    <p class="w3-large">{}</p>
-    <p class="w3-large">{}</p>
-    <form onsubmit="sendEmail(); return false;">
+    <div id="reservation_form_text" >
+      <p class="w3-large">{}</p>
+      <p class="w3-large">{}</p>
+    </div>
+    <form  id="reserve_form" onsubmit="sendRequest(); return false;">
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="{}" required name="Name"></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="{}" required name="Email"></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="number" placeholder="{}" required name="People"></p>
@@ -261,9 +263,6 @@ h1, h2, h3, h4, h5, h6 {
       <p class="w3-large"><textarea class="w3-input w3-padding-16" type="text" style="min-height: 200px;" placeholder="{}" ></textarea></p>
       <p class="w3-large"><button class="w3-button w3-light-grey w3-section w3-right" type="submit">{}</button></p>
     </form>
-  </div>
-
-</div>
 
 """.format(data["reserve"][language],
     data["reserve_description"][language],
@@ -278,6 +277,27 @@ h1, h2, h3, h4, h5, h6 {
     data["message"][language],
     data["reserveButton"][language]
     )
+
+    text += """
+  <div style="display:none" id="reservation_form_success">
+    <h3 class="w3-large">{}</h3>
+    <p class="w3-large">{}</p>
+  </div>
+
+  <div style="display:none" id="reservation_form_failure">
+    <h3 class="w3-large">{}</h3>
+    <p class="w3-large">{}</p>
+    <button onclick="sendEmail(); return false;" class="w3-button w3-light-grey w3-section">{}</button>
+  </div>
+  </div>
+</div>
+""".format(data["success"][language],
+    data["success_description"][language],
+    data["error"][language],
+    data["error_description"][language],
+    data["send_email"][language]
+
+  )
 
     text += """
 

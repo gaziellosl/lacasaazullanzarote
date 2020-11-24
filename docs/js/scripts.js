@@ -42,10 +42,6 @@ function setDropDownButtonName(id, val){
 
 // Slides
 
-function makeReservation(){
-  
-}
-
 function sendEmail() {
   var obj = document.getElementsByClassName("w3-input")
   var i;
@@ -69,8 +65,26 @@ function sendEmail() {
     }
   }
 
+  body += "%0D%0A" + "Note: there was an error with the website.".replace(' ',"%20") + "%0D%0A";
+
   var text = "mailto:gaziellosl@gmail.com?subject=" + subject + "&body=" + body;
   window.open(text);
+}
+
+function updateForm(code) {
+  var reservation_form = document.getElementById("reserve_form");
+  var reservation_form_text = document.getElementById("reservation_form_text");
+  reservation_form.style.display = "none";
+  reservation_form_text.style.display = "none";
+
+  if (code == 200){
+    var reservation_form_success = document.getElementById("reservation_form_success");
+    reservation_form_success.style.display = "block";
+  } else {
+    var reservation_form_failure= document.getElementById("reservation_form_failure");
+    reservation_form_failure.style.display = "block";
+  }
+
 }
 
 
@@ -89,19 +103,17 @@ function sendRequest() {
   results['special'] = obj.item(6).value
 
   const xhr = new XMLHttpRequest();
-  //const url = 'https://fy1q8prbdk.execute-api.us-east-1.amazonaws.com/default/server_test';
-  const url = 'https://lacasaazullanzarote.com/reservation';
+  //const url = 'https://tjdh4namwe.execute-api.us-east-1.amazonaws.com/default/server-lacasaazul';
+  const url = 'https://res1.lacasaazullanzarote.com/';
   xhr.open("POST", url);
   xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://lacasaazullanzarote.com/');
   xhr.send(JSON.stringify(results));
 
   xhr.onreadystatechange = (e) => {
     console.log(xhr.responseText)
+    updateForm(xhr.responseText)
   }
 }
-
-
 
 function showSlides(n, id, to=null) {
   var i;

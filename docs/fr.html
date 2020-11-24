@@ -679,9 +679,11 @@ h1, h2, h3, h4, h5, h6 {
   <!-- Reserve Section -->
   <div class="w3-container w3-padding-64" style="margin-right:5vw;margin-left:5vw" id="reserve">
     <h1>Réserver</h1><br>
-    <p class="w3-large">Complétez le formulaire et nous vous contacterons aussi vite que possible.</p>
-    <p class="w3-large">Nous n'acceptons pas de reserves de moins de 3 nuits. Si vous louez moins de 7 nuits, vous devrez payer un suplément de 30€ pour le ménage.</p>
-    <form onsubmit="sendRequest(); return false;">
+    <div id="reservation_form_text" >
+      <p class="w3-large">Complétez le formulaire et nous vous contacterons aussi vite que possible.</p>
+      <p class="w3-large">Nous n'acceptons pas de reserves de moins de 3 nuits. Si vous louez moins de 7 nuits, vous devrez payer un suplément de 30€ pour le ménage.</p>
+    </div>
+    <form  id="reserve_form" onsubmit="sendRequest(); return false;">
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="Prénom" required name="Name"></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="Courrier Électronique" required name="Email"></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="number" placeholder="Quantité de personnes" required name="People"></p>
@@ -697,13 +699,23 @@ h1, h2, h3, h4, h5, h6 {
       <p class="w3-large w3-input w3-padding-16" style="color:grey;" id="appartmentFormTitle" >Appartement:</p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="number" placeholder="Nombre de nuits" required name="Noches" min="3"></p>
       <p class="w3-large w3-input w3-padding-16" style="color:grey;" id="dateFormTitle">A partir de:     <input id="dateForm" class="dropdown" type="date" placeholder="Date" required name="date" ></p>
-      <p class="w3-large"><textarea class="w3-input w3-padding-16" type="text" style="min-height: 200px;" placeholder="Message ou demande speciale (optionnel)" ></textarea></p>
+      <p class="w3-large"><textarea class="w3-input w3-padding-16" type="text" style="min-height: 200px;" placeholder="Message ou demande spéciale (optionnel)" ></textarea></p>
       <p class="w3-large"><button class="w3-button w3-light-grey w3-section w3-right" type="submit">Soliciter une reservation</button></p>
     </form>
+
+
+  <div style="display:none" id="reservation_form_success">
+    <h3 class="w3-large">Succès</h3>
+    <p class="w3-large">Merci! Votre demande a été reçu. Nous vous répondrons par courrier électronique dans les plus brefs délais.</p>
   </div>
 
+  <div style="display:none" id="reservation_form_failure">
+    <p class="w3-large">Erreur</p>
+    <p class="w3-large">Une erreur s'est produite dans le serveur. S'il vous plaît, veuillez envoyer un courriel à bgaziello@gmail.com en indiquant vos coordonnées et en précisant qu'il y a eu un problème avec le site web.</p>
+    <button onclick="sendEmail(); return false;" class="w3-button w3-light-grey w3-section">Envoyer courriel</button>
+  </div>
+  </div>
 </div>
-
 
 
 <footer class="w3-center w3-light-grey w3-padding-32">

@@ -679,9 +679,11 @@ h1, h2, h3, h4, h5, h6 {
   <!-- Reserve Section -->
   <div class="w3-container w3-padding-64" style="margin-right:5vw;margin-left:5vw" id="reserve">
     <h1>Reservar</h1><br>
-    <p class="w3-large">Complete el formulario y le contestaremos con la mayor brevedad posible.</p>
-    <p class="w3-large">No aceptamos reservas de menos de 3 noches. Si alquila menos de 7 noches, tendrá que pagar 30 € adicionales de limpieza .</p>
-    <form onsubmit="sendEmail(); return false;">
+    <div id="reservation_form_text" >
+      <p class="w3-large">Complete el formulario y le contestaremos con la mayor brevedad posible.</p>
+      <p class="w3-large">No aceptamos reservas de menos de 3 noches. Si alquila menos de 7 noches, tendrá que pagar 30 € adicionales de limpieza .</p>
+    </div>
+    <form  id="reserve_form" onsubmit="sendRequest(); return false;">
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="Nombre" required name="Name"></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="text" placeholder="Correo electrónico" required name="Email"></p>
       <p class="w3-large"><input class="w3-input w3-padding-16" type="number" placeholder="Número de personas" required name="People"></p>
@@ -700,10 +702,20 @@ h1, h2, h3, h4, h5, h6 {
       <p class="w3-large"><textarea class="w3-input w3-padding-16" type="text" style="min-height: 200px;" placeholder="Mensaje o petición especial (opcional)" ></textarea></p>
       <p class="w3-large"><button class="w3-button w3-light-grey w3-section w3-right" type="submit">Solicitar reserva</button></p>
     </form>
+
+
+  <div style="display:none" id="reservation_form_success">
+    <h3 class="w3-large">Éxito</h3>
+    <p class="w3-large">¡Gracias! Su petición se realizó con éxito. Le contestaremos por correo electrónico con la mayor brevedad posible.</p>
   </div>
 
+  <div style="display:none" id="reservation_form_failure">
+    <p class="w3-large">Error</p>
+    <p class="w3-large">Ha ocurrido un error en el servidor. Porfavor, envíenos un mail a la dirección de correo electrónico bgaziello@gmail.com con su información e indíquenos que ha habido un problema con la web.</p>
+    <button onclick="sendEmail(); return false;" class="w3-button w3-light-grey w3-section">Enviar email</button>
+  </div>
+  </div>
 </div>
-
 
 
 <footer class="w3-center w3-light-grey w3-padding-32">
