@@ -42,6 +42,10 @@ function setDropDownButtonName(id, val){
 
 // Slides
 
+function makeReservation(){
+  
+}
+
 function sendEmail() {
   var obj = document.getElementsByClassName("w3-input")
   var i;
@@ -79,14 +83,17 @@ function sendRequest() {
   results['name'] = obj.item(0).value
   results['email'] = obj.item(1).value
   results['qty_people'] = obj.item(2).value
-  results['qty_nights'] = obj.item(3).value
+  results['qty_nights'] = obj.item(4).value
   results['date'] = document.getElementById("dateForm").value;
   results['appartment'] = document.getElementById("dropdown_reserve_button").innerHTML;
+  results['special'] = obj.item(6).value
 
   const xhr = new XMLHttpRequest();
-  const url = 'https://fy1q8prbdk.execute-api.us-east-1.amazonaws.com/default/server_test';
+  //const url = 'https://fy1q8prbdk.execute-api.us-east-1.amazonaws.com/default/server_test';
+  const url = 'https://lacasaazullanzarote.com/reservation';
   xhr.open("POST", url);
   xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://lacasaazullanzarote.com/');
   xhr.send(JSON.stringify(results));
 
   xhr.onreadystatechange = (e) => {
