@@ -69,6 +69,33 @@ function sendEmail() {
   window.open(text);
 }
 
+
+function sendRequest() {
+
+  var obj = document.getElementsByClassName("w3-input")
+
+  results = {}
+
+  results['name'] = obj.item(0).value
+  results['email'] = obj.item(1).value
+  results['qty_people'] = obj.item(2).value
+  results['qty_nights'] = obj.item(3).value
+  results['date'] = document.getElementById("dateForm").value;
+  results['appartment'] = document.getElementById("dropdown_reserve_button").innerHTML;
+
+  const xhr = new XMLHttpRequest();
+  const url = 'https://fy1q8prbdk.execute-api.us-east-1.amazonaws.com/default/server_test';
+  xhr.open("POST", url);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify(results));
+
+  xhr.onreadystatechange = (e) => {
+    console.log(xhr.responseText)
+  }
+}
+
+
+
 function showSlides(n, id, to=null) {
   var i;
   if (to!=null){slideIndex[n]=to;}
