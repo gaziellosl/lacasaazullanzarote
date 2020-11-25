@@ -71,13 +71,13 @@ function sendEmail() {
   window.open(text);
 }
 
-function updateForm(code) {
+function updateForm(success) {
   var reservation_form = document.getElementById("reserve_form");
   var reservation_form_text = document.getElementById("reservation_form_text");
   reservation_form.style.display = "none";
   reservation_form_text.style.display = "none";
 
-  if (code == 200){
+  if (success){
     var reservation_form_success = document.getElementById("reservation_form_success");
     reservation_form_success.style.display = "block";
   } else {
@@ -109,8 +109,7 @@ function sendRequest() {
   xhr.send(JSON.stringify(results));
 
   xhr.onreadystatechange = (e) => {
-    console.log(xhr.responseText)
-    updateForm(xhr.responseText)
+    updateForm(parseInt(xhr.body))
   }
 }
 
