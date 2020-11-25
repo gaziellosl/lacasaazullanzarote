@@ -103,8 +103,7 @@ function sendRequest() {
   results['special'] = obj.item(6).value
 
   const xhr = new XMLHttpRequest();
-  //const url = 'https://tjdh4namwe.execute-api.us-east-1.amazonaws.com/default/server-lacasaazul';
-  const url = 'https://res2.lacasaazullanzarote.com/';
+  const url = 'https://tjdh4namwe.execute-api.us-east-1.amazonaws.com/default/server-lacasaazul';
   xhr.open("POST", url);
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(JSON.stringify(results));
