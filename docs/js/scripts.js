@@ -109,7 +109,7 @@ function sendRequest() {
   xhr.send(JSON.stringify(results));
 
   xhr.onreadystatechange = (e) => {
-    updateForm(parseInt(xhr.body))
+    updateForm(xhr.response)
   }
 }
 
