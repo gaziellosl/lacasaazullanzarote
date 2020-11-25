@@ -77,11 +77,17 @@ function updateForm(success) {
   reservation_form.style.display = "none";
   reservation_form_text.style.display = "none";
 
+  reservation_form.style.display = "none";
+  reservation_form_text.style.display = "none";
+
+  var reservation_form_success = document.getElementById("reservation_form_success");
+  var reservation_form_failure= document.getElementById("reservation_form_failure");
+
   if (success){
-    var reservation_form_success = document.getElementById("reservation_form_success");
     reservation_form_success.style.display = "block";
+    reservation_form_failure.style.display = "none";
   } else {
-    var reservation_form_failure= document.getElementById("reservation_form_failure");
+    reservation_form_success.style.display = "none";
     reservation_form_failure.style.display = "block";
   }
 
@@ -104,12 +110,12 @@ function sendRequest() {
 
   const xhr = new XMLHttpRequest();
   const url = 'https://tjdh4namwe.execute-api.us-east-1.amazonaws.com/default/server-lacasaazul';
-  xhr.open("POST", url);
+  xhr.open("POST", url, true);
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(JSON.stringify(results));
 
   xhr.onreadystatechange = (e) => {
-    updateForm(xhr.response)
+    updateForm(parseInt(xhr.response))
   }
 }
 
