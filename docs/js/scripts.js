@@ -105,7 +105,7 @@ function sendRequest() {
   results['qty_people'] = obj.item(2).value
   results['qty_nights'] = obj.item(4).value
   results['date'] = document.getElementById("dateForm").value;
-  results['appartment'] = document.getElementById("dropdown_reserve_button").innerHTML;
+  results['apartment'] = document.getElementById("dropdown_reserve_button").innerHTML;
   results['special'] = obj.item(6).value
 
   const xhr = new XMLHttpRequest();
