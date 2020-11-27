@@ -279,6 +279,8 @@ h1, h2, h3, h4, h5, h6 {
     )
 
     text += """
+  <div class="loader" style="display:none" id="loading_spinner"></div>
+
   <div style="display:none" id="reservation_form_success">
     <h3 class="w3-large">{}</h3>
     <p class="w3-large">{}</p>
