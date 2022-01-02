@@ -24,16 +24,16 @@ def parseCSV(dir, stdout=0):
     for i in range(len(text)):
         text[i] = text[i].split(';')
 
-    #Clean empty
+    # Clean empty
     for item in text[0]:
         if item == '':
             text[0].remove(item)
-    #Clean spaces
+    # Clean spaces
     for i in range(len(text[0])):
         text[0][i] = text[0][i].replace(" ", "")
 
     data = {}
-    for i in range(1,len(text)): #lines
+    for i in range(1, len(text)):  # lines
         if text[i][0] != '':
             data[text[i][0]] = {}
             for j in range(1, (min(len(text[0]),len(text[i])))):
