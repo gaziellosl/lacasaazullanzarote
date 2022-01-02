@@ -38,7 +38,7 @@ def parseCSV(dir, stdout=0):
             data[text[i][0]] = {}
             for j in range(1, (min(len(text[0]),len(text[i])))):
                 if stdout:
-                    print(i,j)
+                    print(i, j)
                     print(text[i][0])
                     print(text[0][j])
                     print(text[i][j].strip())
