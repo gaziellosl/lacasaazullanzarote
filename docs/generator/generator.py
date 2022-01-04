@@ -184,7 +184,12 @@ h1, h2, h3, h4, h5, h6 {
       <h5 class="w3-center">{}</h5>
       <p class="w3-large">{}</p>
       <p class="w3-large w3-text-grey w3-hide-medium">{}</p>
-""".format(section['title'][language],section['subtitle'][language],section['description'][language],section['subdescription'][language])
+""".format(
+            section['title'][language],
+            section['subtitle'][language],
+            section['description'][language],
+            section['subdescription'][language]
+        )
 
         if 'price' in section:
             text += """
@@ -209,9 +214,10 @@ h1, h2, h3, h4, h5, h6 {
   </div>
 </div>
 <hr>
-""".format(data["commodities"][language],
-    data["commodities_subtitle"][language],
-    data["commodities_description"][language],
+""".format(
+        data["commodities"][language],
+        data["commodities_subtitle"][language],
+        data["commodities_description"][language],
     )
 
     text += """
@@ -230,9 +236,10 @@ h1, h2, h3, h4, h5, h6 {
   </div>
 </div>
 <hr>
-""".format(data["find"][language],
-    data["directions"][language],
-    data["transfer"][language]
+""".format(
+        data["find"][language],
+        data["directions"][language],
+        data["transfer"][language],
     )
 
     text += """
@@ -263,18 +270,19 @@ h1, h2, h3, h4, h5, h6 {
       <p class="w3-large"><button class="w3-button w3-light-grey w3-section w3-right" type="submit">{}</button></p>
     </form>
 
-""".format(data["reserve"][language],
-    data["reserve_description"][language],
-    data["reserve_conditions"][language],
-    data["name"][language],
-    data["email"][language],
-    data["people"][language],
-    data["appartment"][language],
-    data["appartment"][language],
-    data["nights"][language],
-    data["from"][language],
-    data["message"][language],
-    data["reserveButton"][language]
+""".format(
+        data["reserve"][language],
+        data["reserve_description"][language],
+        data["reserve_conditions"][language],
+        data["name"][language],
+        data["email"][language],
+        data["people"][language],
+        data["appartment"][language],
+        data["appartment"][language],
+        data["nights"][language],
+        data["from"][language],
+        data["message"][language],
+        data["reserveButton"][language]
     )
 
     text += """
@@ -292,12 +300,12 @@ h1, h2, h3, h4, h5, h6 {
   </div>
   </div>
 </div>
-""".format(data["success"][language],
-    data["success_description"][language],
-    data["error"][language],
-    data["error_description"][language],
-    data["send_email"][language]
-
+""".format(
+        data["success"][language],
+        data["success_description"][language],
+        data["error"][language],
+        data["error_description"][language],
+        data["send_email"][language]
   )
 
     text += """
@@ -334,8 +342,9 @@ h1, h2, h3, h4, h5, h6 {
 </body>
 </html>
 """
-    with open(dir+'/../'+ name, 'w') as file:
+    with open(dir+'/../' + name, 'w') as file:
         file.write(text)
+
 
 def insertSlidesShow(n, section, language):
 
