@@ -349,7 +349,7 @@ h1, h2, h3, h4, h5, h6 {
 def insertSlidesShow(n, section, language):
 
     text = ""
-    if (n%2==0):
+    if n % 2 == 0:
         text += """
     <div class="w3-col m6 w3-padding-xlarge slide_container_right" id="slideshow-container_{}" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
 """.format(section['id'])
