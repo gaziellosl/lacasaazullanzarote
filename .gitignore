@@ -17,6 +17,9 @@
 # Icons on OSX
 *Icon^M
 
+# Pycharm
+.idea
+
 #####################
 # Project dependent #
 #####################
