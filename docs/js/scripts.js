@@ -9,6 +9,19 @@
 //   }
 // }
 
+
+function toggleSwitchButton(state, id){
+  const slidesShow = document.getElementById(`slideshow-container_${id}`);
+  const virtualTour = document.getElementById(`virtual-tour-${id}`);
+  if (state) {
+    slidesShow.style.display = "none";
+    virtualTour.style.display = "block";
+  } else {
+    slidesShow.style.display = "block";
+    virtualTour.style.display = "none";
+  }
+}
+
 var dropdowns =[]
 
 function dropDownClick(id, callback) {

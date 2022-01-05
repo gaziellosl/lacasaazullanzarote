@@ -96,7 +96,9 @@ h1, h2, h3, h4, h5, h6 {
 
   <div class="w3-row w3-padding-64 slider_container" id="casa_azul">
 
-    <div class="w3-col m6 w3-padding-xlarge slide_container_right" id="slideshow-container_casa_azul" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
+    <div class="w3-col m6 w3-padding-xlarge slide_container_right" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
+        
+    <div id="slideshow-container_casa_azul">
 
     <!-- Slideshow container -->
     <div class="slideshow-container" style="max-width:90%;padding-top:15%">
@@ -153,6 +155,7 @@ h1, h2, h3, h4, h5, h6 {
     setInterval(showSlidesPlusWithCheck, 5300, 0, 'casa_azul', 1);
     </script>
 
+    </div>
 
     <div class="w3-col m6 w3-padding-xlarge slide_container_middle" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
       <h1 class="w3-center">La Casa Azul</h1><br>
@@ -169,7 +172,14 @@ h1, h2, h3, h4, h5, h6 {
 
   <div class="w3-row w3-padding-64 slider_container" id="jameos">
 
-    <div class="w3-col m6 w3-padding-xlarge slide_container_left" id="slideshow-container_jameos" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
+    <div class="w3-col m6 w3-padding-xlarge slide_container_left" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
+        
+            <div class="switch-button" id="switch-button-jameos">
+                <input class="switch-button-checkbox" type="checkbox" onclick="toggleSwitchButton(this.checked, 'jameos')"></input>
+                <label class="switch-button-label" for=""><span class="switch-button-label-span">Photos</span></label>
+            </div>
+        
+    <div id="slideshow-container_jameos">
 
     <!-- Slideshow container -->
     <div class="slideshow-container" style="max-width:90%;padding-top:15%">
@@ -234,6 +244,15 @@ h1, h2, h3, h4, h5, h6 {
     setInterval(showSlidesPlusWithCheck, 5400, 1, 'jameos', 1);
     </script>
 
+                  <div id="virtual-tour-jameos" style="display:none;max-width:95%;padding-top:10%"">
+                    <iframe src="https://www.google.com/maps/embed?pb=!4v1641385892863!6m8!1m7!1sCAoSLEFGMVFpcFAwcjAxbVRUNHNzaFFEcERZWjFER2ZLY3VqdTRoRG5NQ0VtNVVE!2m2!1d29.14608558339!2d-13.447234846651!3f84.6774505598382!4f-15.63656781156898!5f0.7820865974627469" 
+                        style="width:100%;height:55vh;" style="border:0;" allowfullscreen=""
+                        loading="lazy" frameborder="0" scrolling="no" marginheight="0"
+                        marginwidth="0"
+                    ></iframe>
+                  </div>
+            
+    </div>
 
     <div class="w3-col m6 w3-padding-xlarge slide_container_middle" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
       <h1 class="w3-center">Jameos</h1><br>
@@ -251,7 +270,14 @@ h1, h2, h3, h4, h5, h6 {
 
   <div class="w3-row w3-padding-64 slider_container" id="la_cueva">
 
-    <div class="w3-col m6 w3-padding-xlarge slide_container_right" id="slideshow-container_la_cueva" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
+    <div class="w3-col m6 w3-padding-xlarge slide_container_right" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
+        
+            <div class="switch-button" id="switch-button-la_cueva">
+                <input class="switch-button-checkbox" type="checkbox" onclick="toggleSwitchButton(this.checked, 'la_cueva')"></input>
+                <label class="switch-button-label" for=""><span class="switch-button-label-span">Photos</span></label>
+            </div>
+        
+    <div id="slideshow-container_la_cueva">
 
     <!-- Slideshow container -->
     <div class="slideshow-container" style="max-width:90%;padding-top:15%">
@@ -340,6 +366,15 @@ h1, h2, h3, h4, h5, h6 {
     setInterval(showSlidesPlusWithCheck, 5700, 2, 'la_cueva', 1);
     </script>
 
+                  <div id="virtual-tour-la_cueva" style="display:none;max-width:95%;padding-top:10%"">
+                    <iframe src="https://www.google.com/maps/embed?pb=!4v1641162853666!6m8!1m7!1sCAoSLEFGMVFpcFA0QVpDdFNiMm9TTXAzb1RqU2xUMmZhNkdBZU5zdlpqQTY2dm1E!2m2!1d29.146064634549!2d-13.447201248672!3f356.1236082415017!4f-8.770890876213187!5f0.7820865974627469" 
+                        style="width:100%;height:55vh;" style="border:0;" allowfullscreen=""
+                        loading="lazy" frameborder="0" scrolling="no" marginheight="0"
+                        marginwidth="0"
+                    ></iframe>
+                  </div>
+            
+    </div>
 
     <div class="w3-col m6 w3-padding-xlarge slide_container_middle" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
       <h1 class="w3-center">La Cueva</h1><br>
@@ -357,7 +392,14 @@ h1, h2, h3, h4, h5, h6 {
 
   <div class="w3-row w3-padding-64 slider_container" id="mirador">
 
-    <div class="w3-col m6 w3-padding-xlarge slide_container_left" id="slideshow-container_mirador" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
+    <div class="w3-col m6 w3-padding-xlarge slide_container_left" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
+        
+            <div class="switch-button" id="switch-button-mirador">
+                <input class="switch-button-checkbox" type="checkbox" onclick="toggleSwitchButton(this.checked, 'mirador')"></input>
+                <label class="switch-button-label" for=""><span class="switch-button-label-span">Photos</span></label>
+            </div>
+        
+    <div id="slideshow-container_mirador">
 
     <!-- Slideshow container -->
     <div class="slideshow-container" style="max-width:90%;padding-top:15%">
@@ -446,6 +488,15 @@ h1, h2, h3, h4, h5, h6 {
     setInterval(showSlidesPlusWithCheck, 5700, 3, 'mirador', 1);
     </script>
 
+                  <div id="virtual-tour-mirador" style="display:none;max-width:95%;padding-top:10%"">
+                    <iframe src="https://www.google.com/maps/embed?pb=!4v1641386122646!6m8!1m7!1sCAoSLEFGMVFpcE5neVZOWmdWNkFCSTJ2WUVXdXpUUzNGOFk2cURkN01wLTNTRzc2!2m2!1d29.14611014937!2d-13.447261438004!3f350.46365179484604!4f-12.940418084592366!5f0.7820865974627469" 
+                        style="width:100%;height:55vh;" style="border:0;" allowfullscreen=""
+                        loading="lazy" frameborder="0" scrolling="no" marginheight="0"
+                        marginwidth="0"
+                    ></iframe>
+                  </div>
+            
+    </div>
 
     <div class="w3-col m6 w3-padding-xlarge slide_container_middle" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
       <h1 class="w3-center">Mirador</h1><br>
@@ -463,7 +514,14 @@ h1, h2, h3, h4, h5, h6 {
 
   <div class="w3-row w3-padding-64 slider_container" id="timanfaya">
 
-    <div class="w3-col m6 w3-padding-xlarge slide_container_right" id="slideshow-container_timanfaya" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
+    <div class="w3-col m6 w3-padding-xlarge slide_container_right" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
+        
+            <div class="switch-button" id="switch-button-timanfaya">
+                <input class="switch-button-checkbox" type="checkbox" onclick="toggleSwitchButton(this.checked, 'timanfaya')"></input>
+                <label class="switch-button-label" for=""><span class="switch-button-label-span">Photos</span></label>
+            </div>
+        
+    <div id="slideshow-container_timanfaya">
 
     <!-- Slideshow container -->
     <div class="slideshow-container" style="max-width:90%;padding-top:15%">
@@ -552,6 +610,15 @@ h1, h2, h3, h4, h5, h6 {
     setInterval(showSlidesPlusWithCheck, 5700, 4, 'timanfaya', 1);
     </script>
 
+                  <div id="virtual-tour-timanfaya" style="display:none;max-width:95%;padding-top:10%"">
+                    <iframe src="https://www.google.com/maps/embed?pb=!4v1641386192158!6m8!1m7!1sCAoSLEFGMVFpcFBiNFJrRGEtYjdaVXp1OXR4TV9Ha1BOS2M0UDduUGRWZG9pZzFT!2m2!1d29.146088228969!2d-13.447300260876!3f20.840332865316157!4f-17.181666363368905!5f0.7820865974627469" 
+                        style="width:100%;height:55vh;" style="border:0;" allowfullscreen=""
+                        loading="lazy" frameborder="0" scrolling="no" marginheight="0"
+                        marginwidth="0"
+                    ></iframe>
+                  </div>
+            
+    </div>
 
     <div class="w3-col m6 w3-padding-xlarge slide_container_middle" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
       <h1 class="w3-center">Timanfaya</h1><br>
@@ -569,7 +636,9 @@ h1, h2, h3, h4, h5, h6 {
 
   <div class="w3-row w3-padding-64 slider_container" id="common">
 
-    <div class="w3-col m6 w3-padding-xlarge slide_container_left" id="slideshow-container_common" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
+    <div class="w3-col m6 w3-padding-xlarge slide_container_left" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
+        
+    <div id="slideshow-container_common">
 
     <!-- Slideshow container -->
     <div class="slideshow-container" style="max-width:90%;padding-top:15%">
@@ -634,6 +703,7 @@ h1, h2, h3, h4, h5, h6 {
     setInterval(showSlidesPlusWithCheck, 5400, 5, 'common', 1);
     </script>
 
+    </div>
 
     <div class="w3-col m6 w3-padding-xlarge slide_container_middle" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
       <h1 class="w3-center">Common Areas</h1><br>

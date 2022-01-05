@@ -175,9 +175,34 @@ h1, h2, h3, h4, h5, h6 {
   <div class="w3-row w3-padding-64 slider_container" id="{}">
 """.format(section['id'], section['id'])
 
+        position = "slide_container_right" if i % 2 == 0 else "slide_container_left"
+        text += """
+    <div class="w3-col m6 w3-padding-xlarge {}" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
+        """.format(position)
+
+        if section["virtual_tour"]["id"]:
+            text += """
+            <div class="switch-button" id="switch-button-{}">
+                <input class="switch-button-checkbox" type="checkbox" onclick="toggleSwitchButton(this.checked, '{}')"></input>
+                <label class="switch-button-label" for=""><span class="switch-button-label-span">{}</span></label>
+            </div>
+        """.format(section['id'], section['id'], data["photos"][language])
+
         text += insertSlidesShow(i, section, language)
 
+        if section["virtual_tour"]["id"]:
+            text += """
+                  <div id="virtual-tour-{}" style="display:none;max-width:95%;padding-top:10%"">
+                    <iframe src="{}" 
+                        style="width:100%;height:55vh;" style="border:0;" allowfullscreen=""
+                        loading="lazy" frameborder="0" scrolling="no" marginheight="0"
+                        marginwidth="0"
+                    ></iframe>
+                  </div>
+            """.format(section['id'], section["virtual_tour"]["id"])
+
         text += """
+    </div>
 
     <div class="w3-col m6 w3-padding-xlarge slide_container_middle" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
       <h1 class="w3-center">{}</h1><br>
@@ -349,21 +374,14 @@ h1, h2, h3, h4, h5, h6 {
 def insertSlidesShow(n, section, language):
 
     text = ""
-    if n % 2 == 0:
-        text += """
-    <div class="w3-col m6 w3-padding-xlarge slide_container_right" id="slideshow-container_{}" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
-""".format(section['id'])
-    else:
-        text += """
-    <div class="w3-col m6 w3-padding-xlarge slide_container_left" id="slideshow-container_{}" data-aos="flip-left" data-aos-anchor-placement="top-bottom">
-""".format(section['id'])
-
     text += """
+    <div id="slideshow-container_{}">
+
     <!-- Slideshow container -->
     <div class="slideshow-container" style="max-width:90%;padding-top:15%">
 
       <!-- Full-width images with number and caption text -->
-"""
+""".format(section['id'])
 
     for i in range(len(section['imgs']['id'])):
         text += """
