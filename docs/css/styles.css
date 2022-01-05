@@ -15,7 +15,7 @@
 }
 
 .switch-button:before {
-    content: "Virtual Tour";
+    content: "Text Right";
     position: absolute;
     top: 0;
     bottom: 0;

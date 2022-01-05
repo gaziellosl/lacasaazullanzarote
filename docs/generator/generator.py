@@ -89,9 +89,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display";
   letter-spacing: 5px;
 }
+.switch-button:before {
+    content: "%s";
+}
 </style>
 <body>
-""" % (data["home"][language])
+""" % (data["home"][language], data["virtual_tour"][language])
 
     text += """
 
